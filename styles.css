@@ -1,0 +1,78 @@
+body{
+    background-color: #ffd54e !important;
+}
+
+#header {
+    background-image: url("./images/header-image.png");
+    background-size: cover; /* Scale the image to cover the entire div */
+    background-repeat: no-repeat; /* Prevent the image from repeating */
+    background-position: center; /* Center the image within the div */
+    height: 280px;
+    width: 100%; 
+}
+
+#header nav {
+    background-color: rgb(0, 0, 0, 0) !important;
+}
+
+#header nav .container-fluid{
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+}
+
+.logo{
+    height: 50px;
+    margin-left: 10px;
+}
+
+/* -------------- carta -------- */
+.carta-title{
+    padding-bottom: 40px;
+}
+
+.carta-title h1{
+    text-align: center;
+    padding: 30px 20px;
+    text-transform:uppercase;
+}
+
+.carta-title img{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 80vw;
+    border: solid 8px #976d50;
+}
+
+.section-title{
+    text-align: center;
+    text-transform: uppercase;
+}
+
+#tapas {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap; /* Allows the cards to wrap to the next line if they don't fit */
+}
+
+/* ------------- card tapa-------- */
+.card-tapa {
+    margin: 0 auto 20px auto;
+    max-width: 60vw;
+}
+.card-title{
+    text-transform: uppercase;
+    margin: auto;
+}
+.card-body-top{
+    padding-bottom: 7px !important;
+}
+.card-body-bottom{
+    text-align: center;
+    padding-bottom: 15px !important;
+    padding-top: 7px !important;
+}
+.card-body-bottom i{
+    font-size: 30px;
+}
