@@ -12,7 +12,10 @@
     height: 15vh;
 
 }
-
+nav {
+    z-index: 100;
+    position: relative;
+}
 .file-folder-nav {
     display: flex;
     position: fixed;
@@ -54,8 +57,64 @@
     margin-bottom: 40px; /* Adjust according to the height of the tabs */
     text-align: center;
     margin-top: 15vh;
+    justify-content: center;
 }
 
 .folder-content.active {
     display: block;
+    justify-content: center;
+}
+
+.folder-content h1 {
+    margin-bottom: 15px;
+}
+
+/* ---------tabs content------- */
+.card-tapa{
+    margin: 0 10vw 15px 10vw;
+}
+
+.card-body-top{
+    padding: 10px 0 !important;
+}
+.card-body-bottom {
+    padding-top: 0 !important;
+    padding-bottom: 10px !important;
+}
+.card-body-bottom i {
+    font-size: 25px;
+}
+
+/* ----------drink cards-------------- */
+.drink-card {
+    margin-bottom: 10px;
+}
+
+
+
+/* ------------ wine cards--------- */
+
+.wine-card {
+    margin-bottom: 10px;
+}
+.wine-card img{
+    height: 100% !important;  /* This will make the image take the full width of its container (the card). */
+    max-width: 50px !important;  /* This sets a maximum width for the image. Adjust as needed. */
+    margin: auto;
+}
+
+.red-wine {
+    border: #5c011f69 3px solid !important;
+}
+
+.white-wine {
+    border: #d2f47c93 3px solid !important;
+}
+
+.rose-wine {
+    border: #ffc1c1d7 3px solid !important;
+}
+
+.cava-wine {
+    border: #FAE6C0 3px solid !important;
 }
