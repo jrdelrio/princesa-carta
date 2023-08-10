@@ -17,130 +17,37 @@
 </head>
 
 <body>
-    <div id="header">
-        <nav class="navbar navbar-expand-lg bg-body-tertiary">
-            <div class="container-fluid">
-                <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
-                    data-bs-target="#navbarTogglerDemo03" aria-controls="navbarTogglerDemo03" aria-expanded="false"
-                    aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
-                <a class="navbar-brand" href="#"><img class="logo" src="./images/taperia-logo.png" /></a>
-                <div class="collapse navbar-collapse" id="navbarTogglerDemo03">
-                    <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-                        <li class="nav-item">
-                            <a class="nav-link active" aria-current="page" href="#">Home</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="#">Link</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link disabled" aria-disabled="true">Disabled</a>
-                        </li>
-                    </ul>
-                    <form class="d-flex" role="search">
-                        <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
-                        <button class="btn btn-outline-success" type="submit">Search</button>
-                    </form>
-                </div>
-            </div>
-        </nav>
+    <div class="header">
+        TAPERÍA<br>
+        Princesa
     </div>
-    <div class="carta-title">
-        <h1>Carta</h1>
-        <img src="./images/carta-tapas.png" />
-    </div>
-    <div class="tapas-platillos">
-        <h2 class="section-title">Tapas y Platillos</h2>
+    <nav>
+        <ul class="file-folder-nav">
+            <li class="folder-tab active" data-target="folder-content1"><i class="fa-solid fa-utensils"></i></li>
+            <li class="folder-tab" data-target="folder-content2"><img src="./icons/rice.png" style="height: 25px;"></li>
+            <li class="folder-tab" data-target="folder-content3"><img src="./icons/soft-drink.png" style="height: 25px;"></li>
+            <li class="folder-tab" data-target="folder-content4"><i class="fa-solid fa-wine-glass"></i></li>
+            <li class="folder-tab" data-target="folder-content5"><img src="./icons/egg.png"/></li>
+            <li class="folder-tab" data-target="folder-content6"><img src="./icons/ice-cream.png" alt=""></li>
+        </ul>
+    </nav>
 
-        <div id=tapas">
+    <!-- ----------tab contents------- -->
+    <div class="folder-content" id="folder-content1">Tapas</div>
+    <div class="folder-content" id="folder-content2">Content for Tab 2</div>
+    <div class="folder-content" id="folder-content4">Content for Tab 3</div>
+    <div class="folder-content" id="folder-content5">Content for Tab 3</div>
+    <div class="folder-content" id="folder-content6">Content for Tab 3</div>
+    <div class="folder-content" id="folder-content7">Content for Tab 3</div>
+    
 
-            <div class="card card-tapa" style="width: 18rem;">
-                <img src="./images/generic-tapa.jpg" class="card-img-top" alt="...">
-                <div class="card-body card-body-top">
-                    <h5 class="card-title">Patatas Bravas</h5>
-                    <p class="card-text">Precio: 5.50 €</p>
-                </div>
-                <div class="card-body card-body-bottom">
-                    <i class="fa-solid fa-circle-plus"></i>
-                </div>
-            </div>
-
-            <div class="card card-tapa" style="width: 18rem;">
-                <img src="./images/generic-tapa.jpg" class="card-img-top" alt="...">
-                <div class="card-body card-body-top">
-                    <h5 class="card-title">Buñelos de Bacalao</h5>
-                    <p class="card-text">Precio: 5.00 €</p>
-                </div>
-                <div class="card-body card-body-bottom">
-                    <i class="fa-solid fa-circle-plus"></i>
-                </div>
-            </div>
-
-            <div class="card card-tapa" style="width: 18rem;">
-                <img src="./images/generic-tapa.jpg" class="card-img-top" alt="...">
-                <div class="card-body card-body-top">
-                    <h5 class="card-title">Bomba Tapería</h5>
-                    <p class="card-text">Precio: 2.85 €/unidad</p>
-                </div>
-                <div class="card-body card-body-bottom">
-                    <i class="fa-solid fa-circle-plus"></i>
-                </div>
-            </div>
-
-            <div class="card card-tapa" style="width: 18rem;">
-                <img src="./images/generic-tapa.jpg" class="card-img-top" alt="...">
-                <div class="card-body card-body-top">
-                    <h5 class="card-title">Croqueta de Jamón</h5>
-                    <p class="card-text">Precio: 1.80 €/unidad</p>
-                </div>
-                <div class="card-body card-body-bottom">
-                    <i class="fa-solid fa-circle-plus"></i>
-                </div>
-            </div>
-
-            <div class="card card-tapa" style="width: 18rem;">
-                <img src="./images/generic-tapa.jpg" class="card-img-top" alt="...">
-                <div class="card-body card-body-top">
-                    <h5 class="card-title">Boquerones Fritos</h5>
-                    <p class="card-text">Precio: 6.50 €</p>
-                </div>
-                <div class="card-body card-body-bottom">
-                    <i class="fa-solid fa-circle-plus"></i>
-                </div>
-            </div>
-
-            <div class="card card-tapa" style="width: 18rem;">
-                <img src="./images/generic-tapa.jpg" class="card-img-top" alt="...">
-                <div class="card-body card-body-top">
-                    <h5 class="card-title">Calamares Fritos</h5>
-                    <p class="card-text">Precio: 8.25 €/unidad</p>
-                </div>
-                <div class="card-body card-body-bottom">
-                    <i class="fa-solid fa-circle-plus"></i>
-                </div>
-            </div>
-
-            <div class="card card-tapa" style="width: 18rem;">
-                <img src="./images/generic-tapa.jpg" class="card-img-top" alt="...">
-                <div class="card-body card-body-top">
-                    <h5 class="card-title">Rabas de Pollo</h5>
-                    <p class="card-text">Precio: 6.95 €/unidad</p>
-                </div>
-                <div class="card-body card-body-bottom">
-                    <i class="fa-solid fa-circle-plus"></i>
-                </div>
-            </div>
-
-
-        </div>
-    </div>
 
 
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm"
         crossorigin="anonymous"></script>
+    <script src="index.js"></script>
 </body>
 
 </html>
