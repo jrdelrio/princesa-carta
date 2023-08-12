@@ -71,7 +71,8 @@ nav {
 
 /* ---------tabs content------- */
 .card-tapa{
-    margin: 0 10vw 15px 10vw;
+    margin: auto;
+    margin-bottom: 15px;
 }
 
 .card-body-top{
