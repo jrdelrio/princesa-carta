@@ -16,7 +16,7 @@ document.querySelectorAll(".folder-tab").forEach((tab) => {
 });
 
 // Set the initial active content
-document.getElementById("folder-content-tapas").classList.add("active");
+document.getElementById("folder-content-wines").classList.add("active");
 
 // jsons
 
@@ -215,91 +215,101 @@ const drinks = [
   },
   {
     name: "Coca Cola Zero",
-    price: "3.50",
+    price: "2.50",
     image: "./images/coca-cola-zero.png",
   },
   {
     name: "Fanta",
-    price: "",
+    price: "2.50",
     image: "./images/fanta-classic.png",
   },
   {
     name: "Fanta Limón",
-    price: "",
+    price: "2.50",
     image: "./images/fanta-lemon.png",
   },
   {
     name: "Sprite",
-    price: "",
+    price: "2.50",
     image: "./images/sprite-classic.png",
   },
   {
     name: "7Up",
-    price: "",
-    image: "",
+    price: "2.50",
+    image: "images/7up.png",
   },
   {
     name: "Nestea",
-    price: "",
+    price: "2.50",
     image: "images/nestea.png",
   },
   {
     name: "Agua Tónica",
     price: "2.50",
-    image: "",
+    image: "images/tonic.png",
   },
   {
     name: "Zumos",
     price: "2.50",
-    image: "",
+    image: "images/orange-juice.png",
   },
   {
     name: "Ginger Ale",
     price: "2.50",
-    image: "",
+    image: "images/ginger-ale.png",
   },
   {
     name: "Red Bull",
     price: "3.00",
     image: "images/red-bull.png",
   },
+  {
+    name: "Limonada",
+    price: "3.50",
+    image: "images/lemonade.png",
+  },
 ];
 
 const beers = [
   {
-    name: "Moritz 7 300cc",
-    price: "",
+    name: "Moritz 7 330cc",
+    price: "2.95",
+    image: "images/moritz7-330.png",
+  },
+  {
+    name: "Moritz 7 650cc",
+    price: "5.5",
+    image: "images/moritz7-650.png",
+  },
+  {
+    name: "Moritz Radler 330cc",
+    price: "2.95",
     image: "",
   },
   {
-    name: "Moritz 7 500cc",
-    price: "",
-    image: "",
-  },
-  {
-    name: "Moritz Radler 300cc",
-    price: "",
-    image: "",
-  },
-  {
-    name: "Moritz Radler 500cc",
-    price: "",
+    name: "Moritz Radler 650cc",
+    price: "5.50",
     image: "",
   },
   {
     name: "Moritz Epidor",
-    price: "27.00",
-    image: "./images/generic-paella.jpg",
+    price: "3.00",
+    image: "./images/epidor.png",
   },
   {
     name: "Ámbar (sin glúten)",
-    price: "",
-    image: "",
+    price: "3.50",
+    image: "images/ambar.png",
+  },
+  {
+    name: "Red IPA",
+    price: "3.50",
+    image: "images/ipa.png",
   },
   {
     name: "Moritz 0.0 (sin alcohol)",
-    price: "",
-    image: "",
+    price: "2.95",
+    image: "images/0.0.png",
   },
 ];
 
@@ -317,44 +327,153 @@ const coctails = [
   {
     name: "Caipiroska",
     price: "7.00",
-    image: null,
+    image: "images/caipiroska.png",
   },
   {
     name: "Margarita",
     price: "7.50",
-    image: "images/margarita.png"
+    image: "images/margarita.png",
   },
   {
     name: "Aperol Spritz",
     price: "6.00",
-    image: null,
+    image: "images/aperol-spritz.png",
   },
   {
     name: "Tequila Sunrise",
     price: "7.00",
-    image: null,
+    image: "images/tequila-sunrise.png",
   },
   {
     name: "Negroni",
     price: "8.00",
-    image: null,
+    image: "images/negroni.png",
   },
   {
     name: "Long Island Iced Tea",
     price: "8.00",
-    image: null,
+    image: "images/long-island-tea.png",
   },
   {
     name: "Moscow Mule",
     price: "8.00",
-    image: null,
+    image: "images/moscow-mule.png",
   },
   {
     name: "Espresso Martini",
     price: "8.00",
-    image: null,
+    image: "images/espresso-martini.png",
   },
 ];
+
+const wines = [
+    {
+      type: "red",
+      name: "Vino de la Casa",
+      glassPrice: "3.50",
+      bottlePrice: "12.95",
+      image: "wine-images/solaguen.png"
+    },
+    {
+      type: "red",
+      name: "Ull de Molins Montsant Catalunya",
+      glassPrice: "4.00",
+      bottlePrice: "16.00",
+      image: "wine-images/solaguen.png"
+    },
+    {
+      type: "red",
+      name: "Camins del Vents Pla de Bages",
+      glassPrice: "4.50",
+      bottlePrice: "20.00",
+      image: "wine-images/solaguen.png"
+    },
+    {
+      type: "red",
+      name: "Ebano 6 Ribera/Cocecha",
+      glassPrice: "4.00",
+      bottlePrice: "16.00",
+      image: "wine-images/solaguen.png"
+    },
+    {
+      type: "red",
+      name: "Solaguen Rioja/Crianza",
+      glassPrice: "4.50",
+      bottlePrice: "20.00",
+      image: "wine-images/solaguen.png"
+    },
+    {
+      type: "red",
+      name: "Viña Salceda Rioja Reserva",
+      glassPrice: null,
+      bottlePrice: "22.00",
+      image: "wine-images/solaguen.png"
+    },
+    {
+      type: "white",
+      name: "Vino de la Casa",
+      glassPrice: "3.50",
+      bottlePrice: "12.95",
+      image: "wine-images/solaguen.png"
+    },
+    {
+      type: "white",
+      name: "Granfeudo Navarra/Chardonnay",
+      glassPrice: "3.50",
+      bottlePrice: "15.00",
+      image: "wine-images/solaguen.png"
+    },
+    {
+      type: "white",
+      name: "Petit Baldoma",
+      glassPrice: "3.50",
+      bottlePrice: "15.00",
+      image: "wine-images/solaguen.png"
+    },
+    {
+      type: "white",
+      name: "Baluarte Verdejo",
+      glassPrice: "4.00",
+      bottlePrice: "18.00",
+      image: "wine-images/solaguen.png"
+    },
+    {
+      type: "white",
+      name: "Innurieta Sauvignon Blanc",
+      glassPrice: "4.00",
+      bottlePrice: "18.00",
+      image: "wine-images/solaguen.png"
+    },
+    {
+      type: "rose",
+      name: "Vino de la Casa",
+      glassPrice: "3.50",
+      bottlePrice: "12.95",
+      image: "wine-images/solaguen.png"
+    },
+    {
+      type: "rose",
+      name: "Corral Navarra",
+      glassPrice: "3.50",
+      bottlePrice: "15.00",
+      image: "wine-images/solaguen.png"
+    },
+    {
+      type: "cava",
+      name: "Cava de Casa",
+      glassPrice: "3.50",
+      bottlePrice: "14.50",
+      image: "wine-images/solaguen.png"
+    },
+    {
+      type: "cava",
+      name: "Cava Reserva",
+      glassPrice: null,
+      bottlePrice: "18.50",
+      image: "wine-images/solaguen.png"
+    }
+  ];
+  
 
 // generate html functions
 
@@ -416,6 +535,83 @@ function generateCoctailHtml(coctail) {
         `;
 }
 
+function generateBeerHtml(beer) {
+  return `
+        <div class="col">
+        <div class="card drink-card">
+            <img src="${beer.image}" class="card-img-top" alt="${beer.name}">
+            <div class="card-body">
+                <h5 class="card-title">${beer.name}</h5>
+                <p class="card-text"><i class="fa-solid fa-wine-glass"></i> ${beer.price}€
+            </div>
+        </div>
+    </div>
+          `;
+}
+
+function generateWineHtml(wine) {
+  const redWineColor = "#5c011f69";
+
+  const whiteWineColor = "#d2f47c93";
+
+  const roseWineColor = "#ffc1c1d7";
+
+  const cavaWhineColor = "#FAE6C0";
+
+  // css style
+  // border: #FAE6C0 3px solid !important
+
+  if (wine.type == "red") {
+    return `
+          <div class="col">
+          <div class="card drink-card red-wine">
+              <img src="${wine.image}" class="card-img-top" alt="${wine.name}">
+              <div class="card-body">
+                  <h5 class="card-title">${wine.name}</h5>
+                  <p class="card-text"><i class="fa-solid fa-wine-glass"></i> ${wine.price}€
+              </div>
+          </div>
+      </div>
+            `;
+  } else if (wine.type == "white") {
+    return `
+          <div class="col">
+          <div class="card drink-card white-wine">
+              <img src="${wine.image}" class="card-img-top" alt="${wine.name}">
+              <div class="card-body">
+                  <h5 class="card-title">${wine.name}</h5>
+                  <p class="card-text"><i class="fa-solid fa-wine-glass"></i> ${wine.price}€
+              </div>
+          </div>
+      </div>
+            `;
+  } else if (wine.type == "rose") {
+    return `
+          <div class="col">
+          <div class="card drink-card rose-wine">
+              <img src="${wine.image}" class="card-img-top" alt="${wine.name}">
+              <div class="card-body">
+                  <h5 class="card-title">${wine.name}</h5>
+                  <p class="card-text"><i class="fa-solid fa-wine-glass"></i> ${wine.price}€
+              </div>
+          </div>
+      </div>
+            `;
+  } else if (wine.type == "cava") {
+    return `
+          <div class="col">
+          <div class="card drink-card cava-wine">
+              <img src="${wine.image}" class="card-img-top" alt="${wine.name}">
+              <div class="card-body">
+                  <h5 class="card-title">${wine.name}</h5>
+                  <p class="card-text"><i class="fa-solid fa-wine-glass"></i> ${wine.price}€
+              </div>
+          </div>
+      </div>
+            `;
+  }
+}
+
 // mapping and adding
 
 const tapasHtml = tapas.map(generateTapaHtml).join("");
@@ -441,3 +637,15 @@ const coctailsHtml = coctails.map(generateCoctailHtml).join("");
 document
   .getElementById("folder-content-coctails-aux")
   .insertAdjacentHTML("beforeend", coctailsHtml);
+
+const beersHtml = beers.map(generateBeerHtml).join("");
+
+document
+  .getElementById("folder-content-beers-aux")
+  .insertAdjacentHTML("beforeend", beersHtml);
+
+const winesHtml = wines.map(generateWineHtml).join("");
+
+document
+  .getElementById("folder-content-wines")
+  .insertAdjacentHTML("beforeend", winesHtml);
