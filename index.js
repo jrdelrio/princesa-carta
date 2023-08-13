@@ -647,5 +647,5 @@ document
 const winesHtml = wines.map(generateWineHtml).join("");
 
 document
-  .getElementById("folder-content-wines")
+  .getElementById("folder-content-wines-aux")
   .insertAdjacentHTML("beforeend", winesHtml);
