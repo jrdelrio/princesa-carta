@@ -18,29 +18,95 @@ document.querySelectorAll(".folder-tab").forEach((tab) => {
 // Set the initial active content
 document.getElementById("folder-content-tapas").classList.add("active");
 
-
-
 // language selector
 
-document.addEventListener("DOMContentLoaded", function() {
-    let flags = document.querySelectorAll('.flag');
+document.addEventListener("DOMContentLoaded", function () {
+  let flags = document.querySelectorAll(".flag");
 
-    flags.forEach(flag => {
-        flag.addEventListener('click', function() {
-            // Remove active-flag class from all flags
-            flags.forEach(innerFlag => {
-                innerFlag.classList.remove('active-flag');
-            });
+  flags.forEach((flag) => {
+    flag.addEventListener("click", function () {
+      // Remove active-flag class from all flags
+      flags.forEach((innerFlag) => {
+        innerFlag.classList.remove("active-flag");
+      });
 
-            // Add active-flag class to the clicked flag
-            flag.classList.add('active-flag');
-        });
+      // Add active-flag class to the clicked flag
+      flag.classList.add("active-flag");
     });
+  });
 });
 
+// Translation Dictionary
+const translations = {
+  ESP: {
+    tapas: "Tapas (Spanish translation)", // Placeholder, you can replace with actual translations.
+    paellas: "Paellas (Spanish translation)",
+    // ... Add other translations here.
+  },
+  ENG: {
+    tapas: "Tapas (English translation)", // Placeholder, you can replace with actual translations.
+    paellas: "Paellas (English translation)",
+    // ... Add other translations here.
+  },
+  FRA: {
+    tapas: "Tapas (French translation)", // Placeholder, you can replace with actual translations.
+    paellas: "Paellas (French translation)",
+    // ... Add other translations here.
+  },
+};
 
+// Function to update the language
+function updateLanguage(lang) {
+  const elements = document.querySelectorAll("[data-lang]");
+  elements.forEach((el) => {
+    const key = el.getAttribute("data-lang");
+    if (translations[lang] && translations[lang][key]) {
+      el.textContent = translations[lang][key];
+    }
+  });
 
+  if (lang === "ENG") {
+    paellas.forEach((paella) => {
+      paella.name = paella.nameEnglish;
+    });
+  } else if (lang === "FRA") {
+    paellas.forEach((paella) => {
+      paella.name = paella.nameEnglish;
+    });
+  }
+  // Refresh the paellas content if necessary.
+  // This is a simple way, there are more efficient ways based on the size and complexity of your app.
+  document.getElementById("folder-content-paellas").innerHTML = paellas
+    .map(generatePaellaHtml)
+    .join("");
+}
 
+// Modify flag event listener
+document.addEventListener("DOMContentLoaded", function () {
+  let flags = document.querySelectorAll(".flag");
+
+  flags.forEach((flag) => {
+    flag.addEventListener("click", function () {
+      // Remove active-flag class from all flags
+      flags.forEach((innerFlag) => {
+        innerFlag.classList.remove("active-flag");
+      });
+
+      // Add active-flag class to the clicked flag
+      flag.classList.add("active-flag");
+
+      // Update the language based on the clicked flag's alt attribute
+      if (flag.alt === "ENG") {
+        updateLanguage("ENG");
+      } else if (flag.alt === "FRA") {
+        updateLanguage("FRA");
+      } else {
+        // Reset to default (you can define your default language logic here)
+        updateLanguage("ESP"); // Assuming "ESP" is your default language identifier.
+      }
+    });
+  });
+});
 
 // jsons
 
@@ -232,18 +298,21 @@ const paellas = [
   {
     name: "Paella de Mariscos",
     nameEnglish: "Seafood Paella",
+    nameFrench: "Paella au Fruits de Mer",
     price: "27.00",
     image: "./images/generic-paella.jpg",
   },
   {
     name: "Paella de Pollo",
     nameEnglish: "Chicken Paella",
+    nameFrench: "Paëlla au Poulet",
     price: "27.00",
     image: "./images/generic-paella.jpg",
   },
   {
     name: "Paella de Verduras",
     nameEnglish: "Vegetables Paella",
+    nameFrench: "Paëlla Aux Légumes",
     price: "22.00",
     image: "./images/generic-paella.jpg",
   },
@@ -619,19 +688,68 @@ function generateTapaHtml(tapa) {
 }
 
 function generatePaellaHtml(paella) {
+  const name = activeLanguage === "ENG" ? paella.nameEnglish : paella.name;
   return `
-        <div class="card card-tapa" style="width: 18rem;">
-            <img src="${paella.image}" class="card-img-top" alt="${paella.name}">
-            <div class="card-body card-body-top">
-                <h5 class="card-name">${paella.name}</h5>
-                <p class="card-text">Precio: ${paella.price}€</p>
-            </div>
-            <div class="card-body card-body-bottom">
-                <i class="fa-solid fa-circle-plus"></i>
-            </div>
-        </div>
+      <div class="card card-tapa" style="width: 18rem;">
+          <img src="${paella.image}" class="card-img-top" alt="${name}">
+          <div class="card-body card-body-top">
+              <h5 class="card-name">${name}</h5>
+              <p class="card-text">Precio: ${paella.price}€</p>
+          </div>
+          <div class="card-body card-body-bottom">
+              <i class="fa-solid fa-circle-plus"></i>
+          </div>
+      </div>
     `;
 }
+
+function updatePaellaContent() {
+  const paellasHtml = paellas.map(generatePaellaHtml).join("");
+  document.getElementById("folder-content-paellas").innerHTML = paellasHtml;
+}
+
+// Function to update the language
+function updateLanguage(lang) {
+  activeLanguage = lang; // Update the active language
+
+  // Translate UI texts
+  const elements = document.querySelectorAll("[data-lang]");
+  elements.forEach((el) => {
+    const key = el.getAttribute("data-lang");
+    if (translations[lang] && translations[lang][key]) {
+      el.textContent = translations[lang][key];
+    }
+  });
+
+  // Update paellas based on the active language
+  updatePaellaContent();
+}
+
+// Modify flag event listener
+document.addEventListener("DOMContentLoaded", function () {
+  let flags = document.querySelectorAll(".flag");
+
+  flags.forEach((flag) => {
+    flag.addEventListener("click", function () {
+      // Remove active-flag class from all flags
+      flags.forEach((innerFlag) => {
+        innerFlag.classList.remove("active-flag");
+      });
+
+      // Add active-flag class to the clicked flag
+      flag.classList.add("active-flag");
+
+      // Update the language based on the clicked flag's alt attribute
+      if (flag.alt === "ENG") {
+        updateLanguage("ENG");
+      } else if (flag.alt === "FRA") {
+        updateLanguage("FRA");
+      } else {
+        updateLanguage("ESP");
+      }
+    });
+  });
+});
 
 function generateDrinkHtml(drink) {
   return `
