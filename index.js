@@ -1,131 +1,22 @@
-document.querySelectorAll(".folder-tab").forEach((tab) => {
-  tab.addEventListener("click", function () {
-    document
-      .querySelectorAll(".folder-tab")
-      .forEach((innerTab) => innerTab.classList.remove("active"));
-
-    document
-      .querySelectorAll(".folder-content")
-      .forEach((content) => content.classList.remove("active"));
-
-    tab.classList.add("active");
-    document
-      .getElementById(tab.getAttribute("data-target"))
-      .classList.add("active");
-  });
-});
-
-// Set the initial active content
-document.getElementById("folder-content-tapas").classList.add("active");
-
-// language selector
-
-document.addEventListener("DOMContentLoaded", function () {
-  let flags = document.querySelectorAll(".flag");
-
-  flags.forEach((flag) => {
-    flag.addEventListener("click", function () {
-      // Remove active-flag class from all flags
-      flags.forEach((innerFlag) => {
-        innerFlag.classList.remove("active-flag");
-      });
-
-      // Add active-flag class to the clicked flag
-      flag.classList.add("active-flag");
-    });
-  });
-});
-
-// Translation Dictionary
-const translations = {
-  ESP: {
-    tapas: "Tapas (Spanish translation)", // Placeholder, you can replace with actual translations.
-    paellas: "Paellas (Spanish translation)",
-    // ... Add other translations here.
-  },
-  ENG: {
-    tapas: "Tapas (English translation)", // Placeholder, you can replace with actual translations.
-    paellas: "Paellas (English translation)",
-    // ... Add other translations here.
-  },
-  FRA: {
-    tapas: "Tapas (French translation)", // Placeholder, you can replace with actual translations.
-    paellas: "Paellas (French translation)",
-    // ... Add other translations here.
-  },
-};
-
-// Function to update the language
-function updateLanguage(lang) {
-  const elements = document.querySelectorAll("[data-lang]");
-  elements.forEach((el) => {
-    const key = el.getAttribute("data-lang");
-    if (translations[lang] && translations[lang][key]) {
-      el.textContent = translations[lang][key];
-    }
-  });
-
-  if (lang === "ENG") {
-    paellas.forEach((paella) => {
-      paella.name = paella.nameEnglish;
-    });
-  } else if (lang === "FRA") {
-    paellas.forEach((paella) => {
-      paella.name = paella.nameEnglish;
-    });
-  }
-  // Refresh the paellas content if necessary.
-  // This is a simple way, there are more efficient ways based on the size and complexity of your app.
-  document.getElementById("folder-content-paellas").innerHTML = paellas
-    .map(generatePaellaHtml)
-    .join("");
-}
-
-// Modify flag event listener
-document.addEventListener("DOMContentLoaded", function () {
-  let flags = document.querySelectorAll(".flag");
-
-  flags.forEach((flag) => {
-    flag.addEventListener("click", function () {
-      // Remove active-flag class from all flags
-      flags.forEach((innerFlag) => {
-        innerFlag.classList.remove("active-flag");
-      });
-
-      // Add active-flag class to the clicked flag
-      flag.classList.add("active-flag");
-
-      // Update the language based on the clicked flag's alt attribute
-      if (flag.alt === "ENG") {
-        updateLanguage("ENG");
-      } else if (flag.alt === "FRA") {
-        updateLanguage("FRA");
-      } else {
-        // Reset to default (you can define your default language logic here)
-        updateLanguage("ESP"); // Assuming "ESP" is your default language identifier.
-      }
-    });
-  });
-});
-
-// jsons
-
 const tapas = [
   {
     name: "Patatas Bravas",
-    nameEnglish: "Patatas Bravas",
+    nameEnglish: '"Bravas" Potatoes',
+    nameFrench: "Patatas Bravas",
     price: "5.50",
     image: "./images/patatas-bravas.png",
   },
   {
     name: "Buñelos de Bacalao",
     nameEnglish: "Cod Fritters",
+    nameFrench: "Beignets de Morue",
     price: "5.00",
     image: "./images/generic-tapa.jpg",
   },
   {
     name: 'Bomba "Tapería"',
     nameEnglish: '"Tapería" Bomb',
+    nameFrench: 'Bombe "Tapería"',
     price: "2.85",
     image: "./images/generic-tapa.jpg",
   },
@@ -440,7 +331,7 @@ const beers = [
   },
 ];
 
-const coctails = [
+const cocktails = [
   {
     name: "Mojito",
     price: "7.00",
@@ -670,62 +561,30 @@ const coffees = [
   },
 ];
 
-// generate html functions
+document.querySelectorAll(".folder-tab").forEach((tab) => {
+  tab.addEventListener("click", function () {
+    document
+      .querySelectorAll(".folder-tab")
+      .forEach((innerTab) => innerTab.classList.remove("active"));
 
-function generateTapaHtml(tapa) {
-  return `
-        <div class="card card-tapa" style="width: 18rem;">
-            <img src="${tapa.image}" class="card-img-top" alt="...">
-            <div class="card-body card-body-top">
-                <h5 class="card-name">${tapa.name}</h5>
-                <p class="card-text">Precio: ${tapa.price}€</p>
-            </div>
-            <div class="card-body card-body-bottom">
-                <i class="fa-solid fa-circle-plus"></i>
-            </div>
-        </div>
-    `;
-}
+    document
+      .querySelectorAll(".folder-content")
+      .forEach((content) => content.classList.remove("active"));
 
-function generatePaellaHtml(paella) {
-  const name = activeLanguage === "ENG" ? paella.nameEnglish : paella.name;
-  return `
-      <div class="card card-tapa" style="width: 18rem;">
-          <img src="${paella.image}" class="card-img-top" alt="${name}">
-          <div class="card-body card-body-top">
-              <h5 class="card-name">${name}</h5>
-              <p class="card-text">Precio: ${paella.price}€</p>
-          </div>
-          <div class="card-body card-body-bottom">
-              <i class="fa-solid fa-circle-plus"></i>
-          </div>
-      </div>
-    `;
-}
-
-function updatePaellaContent() {
-  const paellasHtml = paellas.map(generatePaellaHtml).join("");
-  document.getElementById("folder-content-paellas").innerHTML = paellasHtml;
-}
-
-// Function to update the language
-function updateLanguage(lang) {
-  activeLanguage = lang; // Update the active language
-
-  // Translate UI texts
-  const elements = document.querySelectorAll("[data-lang]");
-  elements.forEach((el) => {
-    const key = el.getAttribute("data-lang");
-    if (translations[lang] && translations[lang][key]) {
-      el.textContent = translations[lang][key];
-    }
+    tab.classList.add("active");
+    document
+      .getElementById(tab.getAttribute("data-target"))
+      .classList.add("active");
   });
+});
 
-  // Update paellas based on the active language
-  updatePaellaContent();
-}
+// Set the initial active content
+document.getElementById("folder-content-tapas").classList.add("active");
 
-// Modify flag event listener
+// language selector
+
+let globalLanguage = "ESP";
+
 document.addEventListener("DOMContentLoaded", function () {
   let flags = document.querySelectorAll(".flag");
 
@@ -739,19 +598,58 @@ document.addEventListener("DOMContentLoaded", function () {
       // Add active-flag class to the clicked flag
       flag.classList.add("active-flag");
 
-      // Update the language based on the clicked flag's alt attribute
-      if (flag.alt === "ENG") {
-        updateLanguage("ENG");
-      } else if (flag.alt === "FRA") {
-        updateLanguage("FRA");
-      } else {
-        updateLanguage("ESP");
-      }
+      // Change the value of globalLanguage based on the alt attribute
+      globalLanguage = flag.getAttribute("alt");
+
+      // Log the changed language
+      console.log(`changed language to ${globalLanguage}`);
+      renderItems(tapas, cardGenerator(tapas), "folder-content-tapas");
     });
   });
+
+  renderItems(tapas, "single", "folder-content-tapas");
+  renderItems(paellas, "single", "folder-content-paellas");
+  renderItems(drinks, "col", "folder-content-drinks-aux");
+  renderItems(cocktails, "col", "folder-content-cocktails-aux");
+  renderItems(beers, "col", "folder-content-beers-aux");
+  renderItems(wines, "wine", "folder-content-wines-aux");
+  renderItems(eggs, "single", "folder-content-eggs");
+  renderItems(desserts, "single", "folder-content-desserts-aux");
+  renderItems(coffees, "col", "folder-content-coffees-aux");
 });
 
-function generateDrinkHtml(drink) {
+// get name function
+function getNameByLanguage(item) {
+  switch (globalLanguage) {
+    case "ESP":
+      return item.name;
+    case "ENG":
+      return item.nameEnglish;
+    case "FRE":
+      return item.nameFrench;
+    default:
+      return item.name;
+  }
+}
+
+function cardGenerator(item) {
+  let name = getNameByLanguage(item);
+
+  return `
+      <div class="card card-tapa" style="width: 18rem;">
+          <img src="${item.image}" class="card-img-top" alt="${name}">
+          <div class="card-body card-body-top">
+              <h5 class="card-name">${name}</h5>
+              <p class="card-text">Precio: ${item.price}€</p>
+          </div>
+          <div class="card-body card-body-bottom">
+              <i class="fa-solid fa-circle-plus"></i>
+          </div>
+      </div>
+    `;
+}
+
+function cardGeneratorDrink(drink) {
   return `
     <div class="col">
     <div class="card drink-card">
@@ -762,49 +660,10 @@ function generateDrinkHtml(drink) {
         </div>
     </div>
 </div>
-      `;
-}
-
-function generateCoctailHtml(coctail) {
-  return `
-      <div class="col">
-      <div class="card drink-card">
-          <img src="${coctail.image}" class="card-img-top" alt="${coctail.name}">
-          <div class="card-body">
-              <h5 class="card-title">${coctail.name}</h5>
-              <p class="card-text"><i class="fa-solid fa-wine-glass"></i> ${coctail.price}€
-          </div>
-      </div>
-  </div>
         `;
 }
 
-function generateBeerHtml(beer) {
-  return `
-        <div class="col">
-        <div class="card drink-card">
-            <img src="${beer.image}" class="card-img-top" alt="${beer.name}">
-            <div class="card-body">
-                <h5 class="card-title">${beer.name}</h5>
-                <p class="card-text"><i class="fa-solid fa-wine-glass"></i> ${beer.price}€
-            </div>
-        </div>
-    </div>
-          `;
-}
-
-function generateWineHtml(wine) {
-  const redWineColor = "#5c011f69";
-
-  const whiteWineColor = "#d2f47c93";
-
-  const roseWineColor = "#ffc1c1d7";
-
-  const cavaWhineColor = "#FAE6C0";
-
-  // css style
-  // border: #FAE6C0 3px solid !important
-
+function cardGeneratorWine(wine) {
   if (wine.type == "red") {
     return `
           <div class="col">
@@ -812,7 +671,8 @@ function generateWineHtml(wine) {
               <img src="${wine.image}" class="card-img-top" alt="${wine.name}">
               <div class="card-body">
                   <h5 class="card-title">${wine.name}</h5>
-                  <p class="card-text"><i class="fa-solid fa-wine-glass"></i> ${wine.price}€
+                  <p class="card-text"><img src="./icons/glass-wine.png"/> ${wine.glassPrice}€</p>
+                  <p class="card-text"><img src="./icons/wine-bottle.png"/> ${wine.bottlePrice}€ </p>
               </div>
           </div>
       </div>
@@ -824,7 +684,8 @@ function generateWineHtml(wine) {
               <img src="${wine.image}" class="card-img-top" alt="${wine.name}">
               <div class="card-body">
                   <h5 class="card-title">${wine.name}</h5>
-                  <p class="card-text"><i class="fa-solid fa-wine-glass"></i> ${wine.price}€
+                  <p class="card-text"><img src="./icons/glass-wine.png"/> ${wine.glassPrice}€</p>
+                  <p class="card-text"><img src="./icons/wine-bottle.png"/> ${wine.bottlePrice}€ </p>
               </div>
           </div>
       </div>
@@ -835,8 +696,8 @@ function generateWineHtml(wine) {
           <div class="card drink-card rose-wine">
               <img src="${wine.image}" class="card-img-top" alt="${wine.name}">
               <div class="card-body">
-                  <h5 class="card-title">${wine.name}</h5>
-                  <p class="card-text"><i class="fa-solid fa-wine-glass"></i> ${wine.price}€
+              <p class="card-text"><img src="./icons/glass-wine.png"/> ${wine.glassPrice}€</p>
+              <p class="card-text"><img src="./icons/wine-bottle.png"/> ${wine.bottlePrice}€ </p>
               </div>
           </div>
       </div>
@@ -856,101 +717,22 @@ function generateWineHtml(wine) {
   }
 }
 
-function generateEggHtml(egg) {
-  return `
-          <div class="card card-tapa" style="width: 18rem;">
-              <img src="${egg.image}" class="card-img-top" alt="${egg.name}">
-              <div class="card-body card-body-top">
-                  <h5 class="card-name">${egg.name}</h5>
-                  <p class="card-text">Precio: ${egg.price}€</p>
-              </div>
-              <div class="card-body card-body-bottom">
-                  <i class="fa-solid fa-circle-plus"></i>
-              </div>
-          </div>
-      `;
+// mapping and drawing function
+function renderItems(items, cardType, containerId) {
+  if (cardType == "single") {
+    const htmlContent = items.map((item) => cardGenerator(item)).join("");
+    const container = document.getElementById(containerId);
+    container.innerHTML = "";
+    container.insertAdjacentHTML("beforeend", htmlContent);
+  } else if (cardType == "col"){
+    const htmlContent = items.map((item) => cardGeneratorDrink(item)).join("");
+    const container = document.getElementById(containerId);
+    container.innerHTML = "";
+    container.insertAdjacentHTML("beforeend", htmlContent);
+  } else if (cardType == "wine"){
+    const htmlContent = items.map((item) => cardGeneratorWine(item)).join("");
+    const container = document.getElementById(containerId);
+    container.innerHTML = "";
+    container.insertAdjacentHTML("beforeend", htmlContent);
+  }
 }
-
-function generateDessertHtml(dessert) {
-  return `
-        <div class="col">
-        <div class="card drink-card">
-            <img src="${dessert.image}" class="card-img-top" alt="${dessert.name}">
-            <div class="card-body">
-                <h5 class="card-title">${dessert.name}</h5>
-                <p class="card-text"><i class="fa-solid fa-wine-glass"></i> ${dessert.price}€
-            </div>
-        </div>
-    </div>
-          `;
-}
-
-function generateCoffeeHtml(coffee) {
-  return `
-          <div class="col">
-          <div class="card drink-card">
-              <img src="${coffee.image}" class="card-img-top" alt="${coffee.name}">
-              <div class="card-body">
-                  <h5 class="card-title">${coffee.name}</h5>
-                  <p class="card-text"><i class="fa-solid fa-wine-glass"></i> ${coffee.price}€
-              </div>
-          </div>
-      </div>
-            `;
-}
-
-// mapping and adding
-
-const tapasHtml = tapas.map(generateTapaHtml).join("");
-
-document
-  .getElementById("folder-content-tapas")
-  .insertAdjacentHTML("beforeend", tapasHtml);
-
-const paellasHtml = paellas.map(generatePaellaHtml).join("");
-
-document
-  .getElementById("folder-content-paellas")
-  .insertAdjacentHTML("beforeend", paellasHtml);
-
-const drinksHtml = drinks.map(generateDrinkHtml).join("");
-
-document
-  .getElementById("folder-content-drinks-aux")
-  .insertAdjacentHTML("beforeend", drinksHtml);
-
-const coctailsHtml = coctails.map(generateCoctailHtml).join("");
-
-document
-  .getElementById("folder-content-coctails-aux")
-  .insertAdjacentHTML("beforeend", coctailsHtml);
-
-const beersHtml = beers.map(generateBeerHtml).join("");
-
-document
-  .getElementById("folder-content-beers-aux")
-  .insertAdjacentHTML("beforeend", beersHtml);
-
-const winesHtml = wines.map(generateWineHtml).join("");
-
-document
-  .getElementById("folder-content-wines-aux")
-  .insertAdjacentHTML("beforeend", winesHtml);
-
-const eggsHtml = eggs.map(generateEggHtml).join("");
-
-document
-  .getElementById("folder-content-eggs")
-  .insertAdjacentHTML("beforeend", eggsHtml);
-
-const dessertsHtml = desserts.map(generateDessertHtml).join("");
-
-document
-  .getElementById("folder-content-desserts-aux")
-  .insertAdjacentHTML("beforeend", dessertsHtml);
-
-const coffeesHtml = coffees.map(generateCoffeeHtml).join("");
-
-document
-  .getElementById("folder-content-coffees-aux")
-  .insertAdjacentHTML("beforeend", coffeesHtml);

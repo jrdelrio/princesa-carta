@@ -29,79 +29,80 @@
     </div>
     <nav>
         <ul class="file-folder-nav">
-            <li class="folder-tab active" data-target="folder-content-tapas"><i class="fa-solid fa-utensils"></i></li>
-            <li class="folder-tab" data-target="folder-content-paellas"><img src="./icons/rice.png"
-                    style="height: 25px;"></li>
-            <li class="folder-tab" data-target="folder-content-drinks"><img src="./icons/soft-drink.png"
-                    style="height: 25px;"></li>
-            <li class="folder-tab" data-target="folder-content-wines"><i class="fa-solid fa-wine-glass"></i></li>
-            <li class="folder-tab" data-target="folder-content-eggs"><img src="./icons/egg.png" /></li>
-            <li class="folder-tab" data-target="folder-content-desserts-coffees"><img src="./icons/ice-cream.png"
-                    alt=""></li>
+            <li class="folder-tab active" data-target="folder-content-tapas" id="nav-tapas"><i
+                    class="fa-solid fa-utensils"></i></li>
+            <li class="folder-tab" data-target="folder-content-paellas" id="nav-paellas"><img src="./icons/rice.png"
+                    style="height: 25px;"/></li>
+            <li class="folder-tab" data-target="folder-content-drinks" id="nav-drinks"><img src="./icons/soft-drink.png" style="height: 25px;"></li>
+            <li class="folder-tab" data-target="folder-content-wines" id="nav-wines"><img src="./icons/glass-wine.png" alt="" srcset=""></li>
+            <li class="folder-tab" data-target="folder-content-eggs" id="nav-eggs"><img src="./icons/egg.png" /></li>
+            <li class="folder-tab" data-target="folder-content-desserts-coffees" id="nav-coffees"><img
+                    src="./icons/ice-cream.png" alt=""></li>
         </ul>
     </nav>
 
     <!-- ----------tab contents------- -->
     <div class="folder-content" id="folder-content-tapas">
-        <h1 data-lang="tapas">Tapas</h1>
-        <!-- Similarly for other content... -->
+        <h1>Tapas</h1>
+    </div>
+
+    <div class="folder-content" id="folder-content-paellas">
+        <h1>Paellas</h1>
+    </div>
 
 
+    <div class="folder-content" id="folder-content-drinks">
 
-        <div class="folder-content" id="folder-content-paellas">
-            <h1>Paellas</h1>
-        </div>
-
-
-        <div class="folder-content" id="folder-content-drinks">
+        <div class="row row-cols-2" id="folder-content-drinks-aux">
             <h1>Bebidas</h1>
+            <!-- drinks content -->
+        </div>
+        <div class="row row-cols-2" id="folder-content-beers-aux">
+            <h1>Cervezas</h1>
+            <!-- beers content -->
+        </div>
+        <div class="row row-cols-2" id="folder-content-cocktails-aux">
+            <h1>Cocktails</h1>
+            <!-- coctails content -->
+        </div>
+    </div>
 
-            <div class="row row-cols-2" id="folder-content-drinks-aux">
-                <!-- drinks content -->
-            </div>
-            <div class="row row-cols-2" id="folder-content-beers-aux">
-                <!-- beers content -->
-            </div>
-            <div class="row row-cols-2" id="folder-content-coctails-aux">
-                <!-- coctails content -->
-            </div>
+    <div class="folder-content" id="folder-content-wines">
+        <h1>Vinos</h1>
+
+        <div class="row row-cols-2" id="folder-content-wines-aux">
+            <!-- wines content -->
         </div>
 
-        <div class="folder-content" id="folder-content-wines">
-            <h1>Vinos</h1>
+    </div>
 
-            <div class="row row-cols-2" id="folder-content-wines-aux">
-                <!-- wines content -->
-            </div>
+    <div class="folder-content" id="folder-content-eggs">
+        <h1>Huevos estrellados con Patatas Fritas</h1>
+        <!-- broken eggs content -->
+    </div>
 
+    <div class="folder-content" id="folder-content-desserts-coffees">
+        <h1>Postres</h1>
+        <div class="row row-cols-2" id="folder-content-desserts-aux">
+            <!-- desserts content -->
         </div>
 
-        <div class="folder-content" id="folder-content-eggs">
-            <h1>Huevos estrellados con Patatas Fritas</h1>
-
+        <h1>Cafés</h1>
+        <div class="row row-cols-2" id="folder-content-coffees-aux">
+            <!-- coofees content -->
         </div>
 
-        <div class="folder-content" id="folder-content-desserts-coffees">
-            <h1>Postres</h1>
-            <div class="row row-cols-2" id="folder-content-desserts-aux">
-                <!-- drinks content -->
-            </div>
-
-            <h1>Cafés</h1>
-            <div class="row row-cols-2" id="folder-content-coffees-aux">
-                <!-- coofees content -->
-            </div>
-
-        </div>
+    </div>
 
 
 
 
 
-        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"
-            integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm"
-            crossorigin="anonymous"></script>
-        <script src="index.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm"
+        crossorigin="anonymous"></script>
+    <script src="index.js"></script>
+
 </body>
 
 </html>

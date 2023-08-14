@@ -1,0 +1,185 @@
+[
+    {
+        "name": "Patatas Bravas",
+        "nameEnglish": "\"Bravas\" Potatoes",
+        "nameFrench": "Patatas Bravas",
+        "price": "5.50",
+        "image": "./images/patatas-bravas.png"
+    },
+    {
+        "name": "Buñelos de Bacalao",
+        "nameEnglish": "Cod Fritters",
+        "nameFrench": "Beignets de Morue",
+        "price": "5.00",
+        "image": "./images/generic-tapa.jpg"
+    },
+    {
+        "name": "Bomba \"Tapería\"",
+        "nameEnglish": "\"Tapería\" Bomb",
+        "nameFrench": "Bombe \"Tapería\"",
+        "price": "2.85",
+        "image": "./images/generic-tapa.jpg"
+    },
+    {
+        "name": "Croqueta de Jamón",
+        "nameEnglish": "Ham Croquette",
+        "price": "1.80",
+        "image": "./images/generic-tapa.jpg"
+    },
+    {
+        "name": "Boquerones Fritos",
+        "nameEnglish": "Fried Anchoovies",
+        "price": "6.50",
+        "image": "./images/generic-tapa.jpg"
+    },
+    {
+        "name": "Calamares Fritos",
+        "nameEnglish": "Fried Calamari",
+        "price": "8.25",
+        "image": "./images/generic-tapa.jpg"
+    },
+    {
+        "name": "Rabas de Pollo",
+        "nameEnglish": "Crispy Chicken Fingers",
+        "price": "6.95",
+        "image": "./images/generic-tapa.jpg"
+    },
+    {
+        "name": "Boquerones en Vinagre",
+        "nameEnglish": "Vinegar Anchovies",
+        "price": "4.50",
+        "image": "./images/generic-tapa.jpg"
+    },
+    {
+        "name": "Mejillones al Vapor",
+        "nameEnglish": "Steamed Mussels",
+        "price": "5.50",
+        "image": "./images/generic-tapa.jpg"
+    },
+    {
+        "name": "Sardinas a la plancha",
+        "nameEnglish": "Grilled Sardines",
+        "price": "5.75",
+        "image": "./images/sardinas.png"
+    },
+    {
+        "name": "Gambas al Ajillo",
+        "nameEnglish": "Shrimps in Garlic Sauce",
+        "price": "8.95",
+        "image": "./images/gambas.png"
+    },
+    {
+        "name": "Pulpo a la gallega",
+        "nameEnglish": "Steamed Octopus",
+        "price": "13.95",
+        "image": "./images/generic-tapa.jpg"
+    },
+    {
+        "name": "Choricitos a la Cerveza",
+        "nameEnglish": "Baby Chorizos",
+        "price": "4.95",
+        "image": "./images/generic-tapa.jpg"
+    },
+    {
+        "name": "Lacon con Patatas Cocidas",
+        "nameEnglish": "Pork Shoulder",
+        "price": "4.75",
+        "image": "./images/generic-tapa.jpg"
+    },
+    {
+        "name": "Morcilla de Burgos",
+        "nameEnglish": "Black Sausage from Burgos",
+        "price": "4.55",
+        "image": "./images/generic-tapa.jpg"
+    },
+    {
+        "name": "Pollo al Ajillo",
+        "nameEnglish": "Chicken in Garlic Sauce",
+        "price": "6.50",
+        "image": "./images/generic-tapa.jpg"
+    },
+    {
+        "name": "Butifarra con Patatas",
+        "nameEnglish": "Botifarra with Potatoes",
+        "price": "7.50",
+        "image": "./images/generic-tapa.jpg"
+    },
+    {
+        "name": "Tortilla de Patatas",
+        "nameEnglish": "Spanish Omelette",
+        "price": "4.50",
+        "image": "./images/tortilla.png"
+    },
+    {
+        "name": "Pimientos de Padrón",
+        "nameEnglish": "\"Padrón\" Peppers",
+        "price": "5.50",
+        "image": "./images/generic-tapa.jpg"
+    },
+    {
+        "name": "Champiñones al Jerez",
+        "nameEnglish": "Mushrooms in Sherry Sauce",
+        "price": "5.85",
+        "image": "./images/champinones.png"
+    },
+    {
+        "name": "Surtido de Verduras Salteadas",
+        "nameEnglish": "Sauteed Vegetables",
+        "price": "7.50",
+        "image": "./images/generic-tapa.jpg"
+    },
+    {
+        "name": "Gazpacho Andalús",
+        "nameEnglish": "",
+        "price": "7.50",
+        "image": "./images/generic-tapa.jpg"
+    },
+    {
+        "name": "Gyozas de Verduras",
+        "nameEnglish": "Vegetable Gyozas",
+        "price": "6.50",
+        "image": "./images/generic-tapa.jpg"
+    },
+    {
+        "name": "Gyozas de Pollo (5pcs)",
+        "nameEnglish": "Chicken Gyosas",
+        "price": "6.50",
+        "image": "./images/generic-tapa.jpg"
+    },
+    {
+        "name": "Jamon Ibérico",
+        "nameEnglish": "Iberian Smoked Ham",
+        "price": "12.95",
+        "image": "./images/generic-tapa.jpg"
+    },
+    {
+        "name": "Queso Curado",
+        "nameEnglish": "Cured Chesse",
+        "price": "5.50",
+        "image": "./images/generic-tapa.jpg"
+    },
+    {
+        "name": "Pan con Tomate",
+        "nameEnglish": "Bread with Tomato",
+        "price": "2.50",
+        "image": "./images/pan-tomate.png"
+    },
+    {
+        "name": "Pan",
+        "nameEnglish": "Bread",
+        "price": "1.50",
+        "image": "./images/generic-tapa.jpg"
+    },
+    {
+        "name": "Olivas",
+        "nameEnglish": "Olives",
+        "price": "2.20",
+        "image": "./images/generic-tapa.jpg"
+    },
+    {
+        "name": "Olivas Rellenas",
+        "nameEnglish": "Stuffed Olives",
+        "price": "2.50",
+        "image": "./images/generic-tapa.jpg"
+    }
+]
