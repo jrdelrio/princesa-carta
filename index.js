@@ -16,159 +16,213 @@ document.querySelectorAll(".folder-tab").forEach((tab) => {
 });
 
 // Set the initial active content
-document.getElementById("folder-content-wines").classList.add("active");
+document.getElementById("folder-content-tapas").classList.add("active");
+
+
+
+// language selector
+
+document.addEventListener("DOMContentLoaded", function() {
+    let flags = document.querySelectorAll('.flag');
+
+    flags.forEach(flag => {
+        flag.addEventListener('click', function() {
+            // Remove active-flag class from all flags
+            flags.forEach(innerFlag => {
+                innerFlag.classList.remove('active-flag');
+            });
+
+            // Add active-flag class to the clicked flag
+            flag.classList.add('active-flag');
+        });
+    });
+});
+
+
+
+
 
 // jsons
 
 const tapas = [
   {
     name: "Patatas Bravas",
+    nameEnglish: "Patatas Bravas",
     price: "5.50",
-    image: "./images/generic-tapa.jpg",
+    image: "./images/patatas-bravas.png",
   },
   {
     name: "Buñelos de Bacalao",
+    nameEnglish: "Cod Fritters",
     price: "5.00",
     image: "./images/generic-tapa.jpg",
   },
   {
-    name: "Bomba Tapería",
+    name: 'Bomba "Tapería"',
+    nameEnglish: '"Tapería" Bomb',
     price: "2.85",
     image: "./images/generic-tapa.jpg",
   },
   {
     name: "Croqueta de Jamón",
+    nameEnglish: "Ham Croquette",
     price: "1.80",
     image: "./images/generic-tapa.jpg",
   },
   {
     name: "Boquerones Fritos",
+    nameEnglish: "Fried Anchoovies",
     price: "6.50",
     image: "./images/generic-tapa.jpg",
   },
   {
     name: "Calamares Fritos",
+    nameEnglish: "Fried Calamari",
     price: "8.25",
     image: "./images/generic-tapa.jpg",
   },
   {
     name: "Rabas de Pollo",
+    nameEnglish: "Crispy Chicken Fingers",
     price: "6.95",
     image: "./images/generic-tapa.jpg",
   },
   {
     name: "Boquerones en Vinagre",
+    nameEnglish: "Vinegar Anchovies",
     price: "4.50",
     image: "./images/generic-tapa.jpg",
   },
   {
     name: "Mejillones al Vapor",
+    nameEnglish: "Steamed Mussels",
     price: "5.50",
     image: "./images/generic-tapa.jpg",
   },
   {
     name: "Sardinas a la plancha",
+    nameEnglish: "Grilled Sardines",
     price: "5.75",
-    image: "./images/generic-tapa.jpg",
+    image: "./images/sardinas.png",
   },
   {
     name: "Gambas al Ajillo",
+    nameEnglish: "Shrimps in Garlic Sauce",
     price: "8.95",
-    image: "./images/generic-tapa.jpg",
+    image: "./images/gambas.png",
   },
   {
     name: "Pulpo a la gallega",
+    nameEnglish: "Steamed Octopus",
     price: "13.95",
     image: "./images/generic-tapa.jpg",
   },
   {
     name: "Choricitos a la Cerveza",
+    nameEnglish: "Baby Chorizos",
     price: "4.95",
     image: "./images/generic-tapa.jpg",
   },
   {
     name: "Lacon con Patatas Cocidas",
+    nameEnglish: "Pork Shoulder",
     price: "4.75",
     image: "./images/generic-tapa.jpg",
   },
   {
     name: "Morcilla de Burgos",
+    nameEnglish: "Black Sausage from Burgos",
     price: "4.55",
     image: "./images/generic-tapa.jpg",
   },
   {
     name: "Pollo al Ajillo",
+    nameEnglish: "Chicken in Garlic Sauce",
     price: "6.50",
     image: "./images/generic-tapa.jpg",
   },
   {
     name: "Butifarra con Patatas",
+    nameEnglish: "Botifarra with Potatoes",
     price: "7.50",
     image: "./images/generic-tapa.jpg",
   },
   {
     name: "Tortilla de Patatas",
+    nameEnglish: "Spanish Omelette",
     price: "4.50",
-    image: "./images/generic-tapa.jpg",
+    image: "./images/tortilla.png",
   },
   {
     name: "Pimientos de Padrón",
+    nameEnglish: '"Padrón" Peppers',
     price: "5.50",
     image: "./images/generic-tapa.jpg",
   },
   {
     name: "Champiñones al Jerez",
+    nameEnglish: "Mushrooms in Sherry Sauce",
     price: "5.85",
-    image: "./images/generic-tapa.jpg",
+    image: "./images/champinones.png",
   },
   {
     name: "Surtido de Verduras Salteadas",
+    nameEnglish: "Sauteed Vegetables",
     price: "7.50",
     image: "./images/generic-tapa.jpg",
   },
   {
     name: "Gazpacho Andalús",
+    nameEnglish: "",
     price: "7.50",
     image: "./images/generic-tapa.jpg",
   },
   {
     name: "Gyozas de Verduras",
+    nameEnglish: "Vegetable Gyozas",
     price: "6.50",
     image: "./images/generic-tapa.jpg",
   },
   {
     name: "Gyozas de Pollo (5pcs)",
+    nameEnglish: "Chicken Gyosas",
     price: "6.50",
     image: "./images/generic-tapa.jpg",
   },
   {
     name: "Jamon Ibérico",
+    nameEnglish: "Iberian Smoked Ham",
     price: "12.95",
     image: "./images/generic-tapa.jpg",
   },
   {
     name: "Queso Curado",
+    nameEnglish: "Cured Chesse",
     price: "5.50",
     image: "./images/generic-tapa.jpg",
   },
   {
     name: "Pan con Tomate",
+    nameEnglish: "Bread with Tomato",
     price: "2.50",
-    image: "./images/generic-tapa.jpg",
+    image: "./images/pan-tomate.png",
   },
   {
     name: "Pan",
+    nameEnglish: "Bread",
     price: "1.50",
     image: "./images/generic-tapa.jpg",
   },
 
   {
     name: "Olivas",
+    nameEnglish: "Olives",
     price: "2.20",
     image: "./images/generic-tapa.jpg",
   },
   {
     name: "Olivas Rellenas",
+    nameEnglish: "Stuffed Olives",
     price: "2.50",
     image: "./images/generic-tapa.jpg",
   },
@@ -177,21 +231,25 @@ const tapas = [
 const paellas = [
   {
     name: "Paella de Mariscos",
+    nameEnglish: "Seafood Paella",
     price: "27.00",
     image: "./images/generic-paella.jpg",
   },
   {
     name: "Paella de Pollo",
+    nameEnglish: "Chicken Paella",
     price: "27.00",
     image: "./images/generic-paella.jpg",
   },
   {
     name: "Paella de Verduras",
+    nameEnglish: "Vegetables Paella",
     price: "22.00",
     image: "./images/generic-paella.jpg",
   },
   {
     name: "Arroz Negro",
+    nameEnglish: "Black Rise",
     price: "27.00",
     image: "./images/generic-paella.jpg",
   },
@@ -367,113 +425,181 @@ const coctails = [
 ];
 
 const wines = [
-    {
-      type: "red",
-      name: "Vino de la Casa",
-      glassPrice: "3.50",
-      bottlePrice: "12.95",
-      image: "wine-images/solaguen.png"
-    },
-    {
-      type: "red",
-      name: "Ull de Molins Montsant Catalunya",
-      glassPrice: "4.00",
-      bottlePrice: "16.00",
-      image: "wine-images/solaguen.png"
-    },
-    {
-      type: "red",
-      name: "Camins del Vents Pla de Bages",
-      glassPrice: "4.50",
-      bottlePrice: "20.00",
-      image: "wine-images/solaguen.png"
-    },
-    {
-      type: "red",
-      name: "Ebano 6 Ribera/Cocecha",
-      glassPrice: "4.00",
-      bottlePrice: "16.00",
-      image: "wine-images/solaguen.png"
-    },
-    {
-      type: "red",
-      name: "Solaguen Rioja/Crianza",
-      glassPrice: "4.50",
-      bottlePrice: "20.00",
-      image: "wine-images/solaguen.png"
-    },
-    {
-      type: "red",
-      name: "Viña Salceda Rioja Reserva",
-      glassPrice: null,
-      bottlePrice: "22.00",
-      image: "wine-images/solaguen.png"
-    },
-    {
-      type: "white",
-      name: "Vino de la Casa",
-      glassPrice: "3.50",
-      bottlePrice: "12.95",
-      image: "wine-images/solaguen.png"
-    },
-    {
-      type: "white",
-      name: "Granfeudo Navarra/Chardonnay",
-      glassPrice: "3.50",
-      bottlePrice: "15.00",
-      image: "wine-images/solaguen.png"
-    },
-    {
-      type: "white",
-      name: "Petit Baldoma",
-      glassPrice: "3.50",
-      bottlePrice: "15.00",
-      image: "wine-images/solaguen.png"
-    },
-    {
-      type: "white",
-      name: "Baluarte Verdejo",
-      glassPrice: "4.00",
-      bottlePrice: "18.00",
-      image: "wine-images/solaguen.png"
-    },
-    {
-      type: "white",
-      name: "Innurieta Sauvignon Blanc",
-      glassPrice: "4.00",
-      bottlePrice: "18.00",
-      image: "wine-images/solaguen.png"
-    },
-    {
-      type: "rose",
-      name: "Vino de la Casa",
-      glassPrice: "3.50",
-      bottlePrice: "12.95",
-      image: "wine-images/solaguen.png"
-    },
-    {
-      type: "rose",
-      name: "Corral Navarra",
-      glassPrice: "3.50",
-      bottlePrice: "15.00",
-      image: "wine-images/solaguen.png"
-    },
-    {
-      type: "cava",
-      name: "Cava de Casa",
-      glassPrice: "3.50",
-      bottlePrice: "14.50",
-      image: "wine-images/solaguen.png"
-    },
-    {
-      type: "cava",
-      name: "Cava Reserva",
-      glassPrice: null,
-      bottlePrice: "18.50",
-      image: "wine-images/solaguen.png"
-    }
-  ];
-  
+  {
+    type: "red",
+    name: "Vino de la Casa",
+    glassPrice: "3.50",
+    bottlePrice: "12.95",
+    image: "wine-images/solaguen.png",
+  },
+  {
+    type: "red",
+    name: "Ull de Molins Montsant Catalunya",
+    glassPrice: "4.00",
+    bottlePrice: "16.00",
+    image: "wine-images/solaguen.png",
+  },
+  {
+    type: "red",
+    name: "Camins del Vents Pla de Bages",
+    glassPrice: "4.50",
+    bottlePrice: "20.00",
+    image: "wine-images/solaguen.png",
+  },
+  {
+    type: "red",
+    name: "Ebano 6 Ribera/Cocecha",
+    glassPrice: "4.00",
+    bottlePrice: "16.00",
+    image: "wine-images/solaguen.png",
+  },
+  {
+    type: "red",
+    name: "Solaguen Rioja/Crianza",
+    glassPrice: "4.50",
+    bottlePrice: "20.00",
+    image: "wine-images/solaguen.png",
+  },
+  {
+    type: "red",
+    name: "Viña Salceda Rioja Reserva",
+    glassPrice: null,
+    bottlePrice: "22.00",
+    image: "wine-images/solaguen.png",
+  },
+  {
+    type: "white",
+    name: "Vino de la Casa",
+    glassPrice: "3.50",
+    bottlePrice: "12.95",
+    image: "wine-images/solaguen.png",
+  },
+  {
+    type: "white",
+    name: "Granfeudo Navarra/Chardonnay",
+    glassPrice: "3.50",
+    bottlePrice: "15.00",
+    image: "wine-images/solaguen.png",
+  },
+  {
+    type: "white",
+    name: "Petit Baldoma",
+    glassPrice: "3.50",
+    bottlePrice: "15.00",
+    image: "wine-images/solaguen.png",
+  },
+  {
+    type: "white",
+    name: "Baluarte Verdejo",
+    glassPrice: "4.00",
+    bottlePrice: "18.00",
+    image: "wine-images/solaguen.png",
+  },
+  {
+    type: "white",
+    name: "Innurieta Sauvignon Blanc",
+    glassPrice: "4.00",
+    bottlePrice: "18.00",
+    image: "wine-images/solaguen.png",
+  },
+  {
+    type: "rose",
+    name: "Vino de la Casa",
+    glassPrice: "3.50",
+    bottlePrice: "12.95",
+    image: "wine-images/solaguen.png",
+  },
+  {
+    type: "rose",
+    name: "Corral Navarra",
+    glassPrice: "3.50",
+    bottlePrice: "15.00",
+    image: "wine-images/solaguen.png",
+  },
+  {
+    type: "cava",
+    name: "Cava de Casa",
+    glassPrice: "3.50",
+    bottlePrice: "14.50",
+    image: "wine-images/solaguen.png",
+  },
+  {
+    type: "cava",
+    name: "Cava Reserva",
+    glassPrice: null,
+    bottlePrice: "18.50",
+    image: "wine-images/solaguen.png",
+  },
+];
+
+const eggs = [
+  {
+    name: "con Jamón Ibérico",
+    price: "9.50",
+    image: "./images/generic-tapa.jpg",
+  },
+  {
+    name: "con Choricitos",
+    price: "8.50",
+    image: "./images/generic-tapa.jpg",
+  },
+  {
+    name: "con Butifarra Negra",
+    price: "8.50",
+    image: "./images/generic-tapa.jpg",
+  },
+];
+
+const desserts = [
+  {
+    name: "Crema Catalana",
+    price: "5.50",
+    image: "./images/generic-tapa.jpg",
+  },
+  {
+    name: "Strudel de Manzana",
+    price: "5.50",
+    image: "./images/generic-tapa.jpg",
+  },
+  {
+    name: "Helado",
+    price: "5.50",
+    image: "./images/generic-tapa.jpg",
+  },
+  {
+    name: "Sorbet de Limón con Cava",
+    price: "5.50",
+    image: "./images/generic-tapa.jpg",
+  },
+];
+
+const coffees = [
+  {
+    name: "Café solo",
+    price: "2.00",
+    image: "./images/generic-tapa.jpg",
+  },
+  {
+    name: "Café con Leche",
+    price: "2.50",
+    image: "./images/generic-tapa.jpg",
+  },
+  {
+    name: "Café Cortado",
+    price: "2.25",
+    image: "./images/generic-tapa.jpg",
+  },
+  {
+    name: "Café Americano",
+    price: "2.50",
+    image: "./images/generic-tapa.jpg",
+  },
+  {
+    name: "Carajillo",
+    price: "3.00",
+    image: "./images/generic-tapa.jpg",
+  },
+];
 
 // generate html functions
 
@@ -612,6 +738,49 @@ function generateWineHtml(wine) {
   }
 }
 
+function generateEggHtml(egg) {
+  return `
+          <div class="card card-tapa" style="width: 18rem;">
+              <img src="${egg.image}" class="card-img-top" alt="${egg.name}">
+              <div class="card-body card-body-top">
+                  <h5 class="card-name">${egg.name}</h5>
+                  <p class="card-text">Precio: ${egg.price}€</p>
+              </div>
+              <div class="card-body card-body-bottom">
+                  <i class="fa-solid fa-circle-plus"></i>
+              </div>
+          </div>
+      `;
+}
+
+function generateDessertHtml(dessert) {
+  return `
+        <div class="col">
+        <div class="card drink-card">
+            <img src="${dessert.image}" class="card-img-top" alt="${dessert.name}">
+            <div class="card-body">
+                <h5 class="card-title">${dessert.name}</h5>
+                <p class="card-text"><i class="fa-solid fa-wine-glass"></i> ${dessert.price}€
+            </div>
+        </div>
+    </div>
+          `;
+}
+
+function generateCoffeeHtml(coffee) {
+  return `
+          <div class="col">
+          <div class="card drink-card">
+              <img src="${coffee.image}" class="card-img-top" alt="${coffee.name}">
+              <div class="card-body">
+                  <h5 class="card-title">${coffee.name}</h5>
+                  <p class="card-text"><i class="fa-solid fa-wine-glass"></i> ${coffee.price}€
+              </div>
+          </div>
+      </div>
+            `;
+}
+
 // mapping and adding
 
 const tapasHtml = tapas.map(generateTapaHtml).join("");
@@ -649,3 +818,21 @@ const winesHtml = wines.map(generateWineHtml).join("");
 document
   .getElementById("folder-content-wines-aux")
   .insertAdjacentHTML("beforeend", winesHtml);
+
+const eggsHtml = eggs.map(generateEggHtml).join("");
+
+document
+  .getElementById("folder-content-eggs")
+  .insertAdjacentHTML("beforeend", eggsHtml);
+
+const dessertsHtml = desserts.map(generateDessertHtml).join("");
+
+document
+  .getElementById("folder-content-desserts-aux")
+  .insertAdjacentHTML("beforeend", dessertsHtml);
+
+const coffeesHtml = coffees.map(generateCoffeeHtml).join("");
+
+document
+  .getElementById("folder-content-coffees-aux")
+  .insertAdjacentHTML("beforeend", coffeesHtml);
