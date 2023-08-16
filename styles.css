@@ -124,6 +124,10 @@ nav {
     justify-content: center;
 }
 
+.folder-content h1 {
+    margin-top: 15px;
+}
+
 .folder-content.active {
     display: block;
     justify-content: center;

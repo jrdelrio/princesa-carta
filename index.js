@@ -2,7 +2,7 @@ const tapas = [
   {
     name: "Patatas Bravas",
     nameEnglish: '"Bravas" Potatoes',
-    nameFrench: "Patatas Bravas",
+    nameFrench: "Pommes  Bravas",
     price: "5.50",
     image: "./images/patatas-bravas.png",
   },
@@ -23,163 +23,189 @@ const tapas = [
   {
     name: "Croqueta de Jamón",
     nameEnglish: "Ham Croquette",
+    nameFrench: "Croquette de Jambon",
     price: "1.80",
     image: "./images/generic-tapa.jpg",
   },
   {
     name: "Boquerones Fritos",
     nameEnglish: "Fried Anchoovies",
+    nameFrench: "Anchois Frits",
     price: "6.50",
     image: "./images/generic-tapa.jpg",
   },
   {
     name: "Calamares Fritos",
     nameEnglish: "Fried Calamari",
+    nameFrench: "Calamars Frits",
     price: "8.25",
     image: "./images/generic-tapa.jpg",
   },
   {
     name: "Rabas de Pollo",
     nameEnglish: "Crispy Chicken Fingers",
+    nameFrench: "Doigts de poulet croustillants",
     price: "6.95",
     image: "./images/generic-tapa.jpg",
   },
   {
     name: "Boquerones en Vinagre",
     nameEnglish: "Vinegar Anchovies",
+    nameFrench: "Anchois au Vinaigre",
     price: "4.50",
     image: "./images/generic-tapa.jpg",
   },
   {
     name: "Mejillones al Vapor",
     nameEnglish: "Steamed Mussels",
+    nameFrench: "Moules à la Vapeur",
     price: "5.50",
     image: "./images/generic-tapa.jpg",
   },
   {
     name: "Sardinas a la plancha",
     nameEnglish: "Grilled Sardines",
+    nameFrench: "Sardines Grillées",
     price: "5.75",
     image: "./images/sardinas.png",
   },
   {
     name: "Gambas al Ajillo",
     nameEnglish: "Shrimps in Garlic Sauce",
+    nameFrench: "Crevettes à la Sauce à l'Ail",
     price: "8.95",
     image: "./images/gambas.png",
   },
   {
     name: "Pulpo a la gallega",
     nameEnglish: "Steamed Octopus",
+    nameFrench: "Poulpe Cuit à la Vapeur",
     price: "13.95",
     image: "./images/generic-tapa.jpg",
   },
   {
     name: "Choricitos a la Cerveza",
     nameEnglish: "Baby Chorizos",
+    nameFrench: "Chorizos à la Bière",
     price: "4.95",
     image: "./images/generic-tapa.jpg",
   },
   {
-    name: "Lacon con Patatas Cocidas",
+    name: "Lacón con Patatas Cocidas",
     nameEnglish: "Pork Shoulder",
+    nameFrench: "Jambon aux Pommes de Terre Bouillies",
     price: "4.75",
     image: "./images/generic-tapa.jpg",
   },
   {
     name: "Morcilla de Burgos",
     nameEnglish: "Black Sausage from Burgos",
+    nameFrench: "Boudin Noir de Burgos",
     price: "4.55",
     image: "./images/generic-tapa.jpg",
   },
   {
     name: "Pollo al Ajillo",
     nameEnglish: "Chicken in Garlic Sauce",
+    nameFrench: "Poulet à l'ail",
     price: "6.50",
     image: "./images/generic-tapa.jpg",
   },
   {
     name: "Butifarra con Patatas",
     nameEnglish: "Botifarra with Potatoes",
+    nameFrench: "Saucisse aux Pommes de Terre",
     price: "7.50",
     image: "./images/generic-tapa.jpg",
   },
   {
     name: "Tortilla de Patatas",
     nameEnglish: "Spanish Omelette",
+    nameFrench: "Frites Sauce Brava",
     price: "4.50",
     image: "./images/tortilla.png",
   },
   {
     name: "Pimientos de Padrón",
     nameEnglish: '"Padrón" Peppers',
+    nameFrench: "Piments Padrón",
     price: "5.50",
     image: "./images/generic-tapa.jpg",
   },
   {
     name: "Champiñones al Jerez",
     nameEnglish: "Mushrooms in Sherry Sauce",
+    nameFrench: "Champignons à la Sauce Xérès",
     price: "5.85",
     image: "./images/champinones.png",
   },
   {
     name: "Surtido de Verduras Salteadas",
     nameEnglish: "Sauteed Vegetables",
+    nameFrench: "Légumes sautés assortis",
     price: "7.50",
     image: "./images/generic-tapa.jpg",
   },
   {
     name: "Gazpacho Andalús",
-    nameEnglish: "",
+    nameEnglish: "Andalusian Gazpacho",
+    nameFrench: "Gaspacho Andalou",
     price: "7.50",
     image: "./images/generic-tapa.jpg",
   },
   {
     name: "Gyozas de Verduras",
     nameEnglish: "Vegetable Gyozas",
+    nameFrench: "Gyosas aux Légumes",
     price: "6.50",
     image: "./images/generic-tapa.jpg",
   },
   {
     name: "Gyozas de Pollo (5pcs)",
     nameEnglish: "Chicken Gyosas",
+    nameFrench: "Gyosas au Poulet",
     price: "6.50",
     image: "./images/generic-tapa.jpg",
   },
   {
     name: "Jamon Ibérico",
     nameEnglish: "Iberian Smoked Ham",
+    nameFrench: "Jambon Ibérique",
     price: "12.95",
     image: "./images/generic-tapa.jpg",
   },
   {
     name: "Queso Curado",
     nameEnglish: "Cured Chesse",
+    nameFrench: "Fromage Affiné",
     price: "5.50",
     image: "./images/generic-tapa.jpg",
   },
   {
     name: "Pan con Tomate",
     nameEnglish: "Bread with Tomato",
+    nameFrench: "pain à la Tomate",
     price: "2.50",
     image: "./images/pan-tomate.png",
   },
   {
     name: "Pan",
     nameEnglish: "Bread",
+    nameFrench: "Pain",
     price: "1.50",
     image: "./images/generic-tapa.jpg",
   },
-
   {
     name: "Olivas",
     nameEnglish: "Olives",
+    nameFrench: "Olives",
     price: "2.20",
     image: "./images/generic-tapa.jpg",
   },
   {
     name: "Olivas Rellenas",
     nameEnglish: "Stuffed Olives",
+    nameFrench: "Olives Farcies",
     price: "2.50",
     image: "./images/generic-tapa.jpg",
   },
@@ -205,7 +231,7 @@ const paellas = [
     nameEnglish: "Vegetables Paella",
     nameFrench: "Paëlla Aux Légumes",
     price: "22.00",
-    image: "./images/generic-paella.jpg",
+    image: "./images/paella-verduras.png",
   },
   {
     name: "Arroz Negro",
@@ -220,71 +246,99 @@ const drinks = [
     name: "Agua",
     price: "2.50",
     image: "images/agua.png",
+    nameFrench: "Eau",
+    nameEnglish: "Water",
   },
   {
     name: "Agua con Gas",
     price: "2.50",
     image: "./images/perrier.png",
+    nameFrench: "Eau Gazeuse",
+    nameEnglish: "Sparkling Water",
   },
   {
     name: "Coca Cola",
     price: "3.50",
     image: "./images/coca-cola-classic.png",
+    nameFrench: "Coca Cola",
+    nameEnglish: "Coca Cola",
   },
   {
     name: "Coca Cola Zero",
     price: "2.50",
     image: "./images/coca-cola-zero.png",
+    nameFrench: "Coca Cola Zero",
+    nameEnglish: "Coca Cola Zero",
   },
   {
     name: "Fanta",
     price: "2.50",
     image: "./images/fanta-classic.png",
+    nameFrench: "Fanta",
+    nameEnglish: "Fanta",
   },
   {
     name: "Fanta Limón",
     price: "2.50",
     image: "./images/fanta-lemon.png",
+    nameFrench: "Fanta Citron",
+    nameEnglish: "Fanta Lemon",
   },
   {
     name: "Sprite",
     price: "2.50",
     image: "./images/sprite-classic.png",
+    nameFrench: "Sprite",
+    nameEnglish: "Sprite",
   },
   {
     name: "7Up",
     price: "2.50",
     image: "images/7up.png",
+    nameFrench: "7Up",
+    nameEnglish: "7Up",
   },
   {
     name: "Nestea",
     price: "2.50",
     image: "images/nestea.png",
+    nameFrench: "Nestea",
+    nameEnglish: "Nestea",
   },
   {
     name: "Agua Tónica",
     price: "2.50",
     image: "images/tonic.png",
+    nameFrench: "L'eau Tonique",
+    nameEnglish: "Tonic Water",
   },
   {
     name: "Zumos",
     price: "2.50",
     image: "images/orange-juice.png",
+    nameFrench: "Jus de fruit",
+    nameEnglish: "Juices",
   },
   {
     name: "Ginger Ale",
     price: "2.50",
     image: "images/ginger-ale.png",
+    nameFrench: "Ginger Ale",
+    nameEnglish: "Ginger Ale",
   },
   {
     name: "Red Bull",
     price: "3.00",
     image: "images/red-bull.png",
+    nameFrench: "Red Bull",
+    nameEnglish: "Red Bull",
   },
   {
     name: "Limonada",
     price: "3.50",
     image: "images/lemonade.png",
+    nameFrench: "Limonade",
+    nameEnglish: "Lemonade",
   },
 ];
 
@@ -388,6 +442,8 @@ const wines = [
   {
     type: "red",
     name: "Vino de la Casa",
+    nameEnglish: "Wine of the House",
+    nameFrench: "Vin de la Maison",
     glassPrice: "3.50",
     bottlePrice: "12.95",
     image: "wine-images/solaguen.png",
@@ -430,6 +486,8 @@ const wines = [
   {
     type: "white",
     name: "Vino de la Casa",
+    nameEnglish: "Wine of the House",
+    nameFrench: "Vin de la Maison",
     glassPrice: "3.50",
     bottlePrice: "12.95",
     image: "wine-images/solaguen.png",
@@ -465,6 +523,8 @@ const wines = [
   {
     type: "rose",
     name: "Vino de la Casa",
+    nameEnglish: "Wine of the House",
+    nameFrench: "Vin de la Maison",
     glassPrice: "3.50",
     bottlePrice: "12.95",
     image: "wine-images/solaguen.png",
@@ -479,6 +539,8 @@ const wines = [
   {
     type: "cava",
     name: "Cava de Casa",
+    nameEnglish: "Cava of the House",
+    nameFrench: "Cava de la Maison",
     glassPrice: "3.50",
     bottlePrice: "14.50",
     image: "wine-images/solaguen.png",
@@ -486,6 +548,8 @@ const wines = [
   {
     type: "cava",
     name: "Cava Reserva",
+    nameEnglish: "Reserved Cava",
+    nameFrench: "Cava Réserver",
     glassPrice: null,
     bottlePrice: "18.50",
     image: "wine-images/solaguen.png",
@@ -495,16 +559,22 @@ const wines = [
 const eggs = [
   {
     name: "con Jamón Ibérico",
+    nameFrench: "au Jambon Ibérique",
+    nameEnglish: "with Iberic Ham",
     price: "9.50",
     image: "./images/generic-tapa.jpg",
   },
   {
     name: "con Choricitos",
+    nameFrench: "aux Chorizos",
+    nameEnglish: "with Chorizos",
     price: "8.50",
     image: "./images/generic-tapa.jpg",
   },
   {
     name: "con Butifarra Negra",
+    nameFrench: "avec Saucisse",
+    nameEnglish: "with Sausage",
     price: "8.50",
     image: "./images/generic-tapa.jpg",
   },
@@ -513,21 +583,29 @@ const eggs = [
 const desserts = [
   {
     name: "Crema Catalana",
+    nameEnglish: "Catalan Cream",
+    nameFrench: "Crème Catalane",
     price: "5.50",
-    image: "./images/generic-tapa.jpg",
+    image: "./images/crema-catalana.png",
   },
   {
     name: "Strudel de Manzana",
+    nameEnglish: "Apple Strudel",
+    nameFrench: "Strudel aux Pommes",
     price: "5.50",
     image: "./images/generic-tapa.jpg",
   },
   {
     name: "Helado",
+    nameEnglish: "Ice-Cream",
+    nameFrench: "Glace",
     price: "5.50",
     image: "./images/generic-tapa.jpg",
   },
   {
     name: "Sorbet de Limón con Cava",
+    nameFrench: "Sorbet Citron au Cava",
+    nameEnglish: "Lemon Sorbet with Cava",
     price: "5.50",
     image: "./images/generic-tapa.jpg",
   },
@@ -563,6 +641,7 @@ const coffees = [
 
 document.querySelectorAll(".folder-tab").forEach((tab) => {
   tab.addEventListener("click", function () {
+    console.log("tab clicked");
     document
       .querySelectorAll(".folder-tab")
       .forEach((innerTab) => innerTab.classList.remove("active"));
@@ -590,7 +669,6 @@ document.addEventListener("DOMContentLoaded", function () {
 
   flags.forEach((flag) => {
     flag.addEventListener("click", function () {
-      // Remove active-flag class from all flags
       flags.forEach((innerFlag) => {
         innerFlag.classList.remove("active-flag");
       });
@@ -603,20 +681,29 @@ document.addEventListener("DOMContentLoaded", function () {
 
       // Log the changed language
       console.log(`changed language to ${globalLanguage}`);
-      renderItems(tapas, cardGenerator(tapas), "folder-content-tapas");
+
+      renderItems(tapas, "single", "folder-content-tapas-aux");
+      renderItems(paellas, "single", "folder-content-paellas-aux");
+      renderItems(drinks, "col", "folder-content-drinks-aux");
+      renderItems(cocktails, "col", "folder-content-cocktails-aux");
+      renderItems(beers, "col", "folder-content-beers-aux");
+      renderItems(wines, "wine", "folder-content-wines-aux");
+      renderItems(eggs, "single", "folder-content-eggs-aux");
+      renderItems(desserts, "single", "folder-content-desserts-aux");
+      renderItems(coffees, "col", "folder-content-coffees-aux");
     });
   });
-
-  renderItems(tapas, "single", "folder-content-tapas");
-  renderItems(paellas, "single", "folder-content-paellas");
-  renderItems(drinks, "col", "folder-content-drinks-aux");
-  renderItems(cocktails, "col", "folder-content-cocktails-aux");
-  renderItems(beers, "col", "folder-content-beers-aux");
-  renderItems(wines, "wine", "folder-content-wines-aux");
-  renderItems(eggs, "single", "folder-content-eggs");
-  renderItems(desserts, "single", "folder-content-desserts-aux");
-  renderItems(coffees, "col", "folder-content-coffees-aux");
 });
+
+renderItems(tapas, "single", "folder-content-tapas-aux");
+renderItems(paellas, "single", "folder-content-paellas-aux");
+renderItems(drinks, "col", "folder-content-drinks-aux");
+renderItems(cocktails, "col", "folder-content-cocktails-aux");
+renderItems(beers, "col", "folder-content-beers-aux");
+renderItems(wines, "wine", "folder-content-wines-aux");
+renderItems(eggs, "single", "folder-content-eggs-aux");
+renderItems(desserts, "single", "folder-content-desserts-aux");
+renderItems(coffees, "col", "folder-content-coffees-aux");
 
 // get name function
 function getNameByLanguage(item) {
@@ -625,7 +712,7 @@ function getNameByLanguage(item) {
       return item.name;
     case "ENG":
       return item.nameEnglish;
-    case "FRE":
+    case "FRA":
       return item.nameFrench;
     default:
       return item.name;
@@ -690,26 +777,32 @@ function cardGeneratorWine(wine) {
           </div>
       </div>
             `;
-  } else if (wine.type == "rose") {
+  } else if (wine.type === "rose") {
     return `
           <div class="col">
           <div class="card drink-card rose-wine">
               <img src="${wine.image}" class="card-img-top" alt="${wine.name}">
               <div class="card-body">
-              <p class="card-text"><img src="./icons/glass-wine.png"/> ${wine.glassPrice}€</p>
-              <p class="card-text"><img src="./icons/wine-bottle.png"/> ${wine.bottlePrice}€ </p>
+              <h5 class="card-title">${wine.name}</h5>
+                <p class="card-text"><img src="./icons/glass-wine.png"/> ${wine.glassPrice}€ </p>
+                <p class="card-text"><img src="./icons/wine-bottle.png"/> ${wine.bottlePrice}€ </p>
               </div>
           </div>
       </div>
             `;
   } else if (wine.type == "cava") {
+    const glass =
+      '<p class="card-text"><img src="./icons/glass-wine.png"/> ${wine.glassPrice}€ </p>';
     return `
           <div class="col">
           <div class="card drink-card cava-wine">
               <img src="${wine.image}" class="card-img-top" alt="${wine.name}">
               <div class="card-body">
                   <h5 class="card-title">${wine.name}</h5>
-                  <p class="card-text"><i class="fa-solid fa-wine-glass"></i> ${wine.price}€
+                  ${wine.glassPrice ? glass : ""}
+                <p class="card-text"><img src="./icons/wine-bottle.png"/> ${
+                  wine.bottlePrice
+                }€ </p>
               </div>
           </div>
       </div>
@@ -724,12 +817,12 @@ function renderItems(items, cardType, containerId) {
     const container = document.getElementById(containerId);
     container.innerHTML = "";
     container.insertAdjacentHTML("beforeend", htmlContent);
-  } else if (cardType == "col"){
+  } else if (cardType == "col") {
     const htmlContent = items.map((item) => cardGeneratorDrink(item)).join("");
     const container = document.getElementById(containerId);
     container.innerHTML = "";
     container.insertAdjacentHTML("beforeend", htmlContent);
-  } else if (cardType == "wine"){
+  } else if (cardType == "wine") {
     const htmlContent = items.map((item) => cardGeneratorWine(item)).join("");
     const container = document.getElementById(containerId);
     container.innerHTML = "";
