@@ -1,0 +1,25 @@
+.folder-content {
+    background-color: #bababa69;
+}
+
+.card-tapa {
+    margin: auto;
+    margin-bottom: 15px;
+    padding: 12px;
+    padding-bottom: 0;
+}
+
+.card-body-top {
+    padding: 10px 0 !important;
+}
+
+.card-body-bottom {
+    padding: 0 0 10px 0 !important;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;  /* This centers the icons vertically, if needed */
+}
+
+.card-body-bottom i {
+    font-size: 25px;
+}

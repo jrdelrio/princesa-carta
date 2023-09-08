@@ -1,0 +1,27 @@
+.wine-card {
+    margin-bottom: 10px;
+}
+
+.wine-card img {
+    height: 100% !important;
+    /* This will make the image take the full width of its container (the card). */
+    max-width: 50px !important;
+    /* This sets a maximum width for the image. Adjust as needed. */
+    margin: auto;
+}
+
+.red-wine {
+    border: #5c011f69 3px solid !important;
+}
+
+.white-wine {
+    border: #d2f47c93 3px solid !important;
+}
+
+.rose-wine {
+    border: #ffc1c1d7 3px solid !important;
+}
+
+.cava-wine {
+    border: #FAE6C0 3px solid !important;
+}

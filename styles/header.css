@@ -1,0 +1,72 @@
+.header {
+    text-align: center;
+    color: white;
+    background-color: black;
+    font-size: 30px;
+    width: 100vw;
+    position: fixed;
+    /* Fixed position */
+    top: 0;
+    /* Align with the top edge of the viewport */
+    left: 0;
+    /* Align with the left edge of the viewport */
+    width: 100%;
+    /* Full width */
+    z-index: 999;
+    /* Ensure it appears above other content */
+    height: 20vh;
+    color: white;
+    align-items: center;
+    justify-content: center;
+}
+
+.icon-column{
+    position: fixed;
+    top: 4px;     /* Align with the top edge of the viewport */
+    right: 10px;  /* Offset from the right edge for visibility */
+    z-index: 1001; /* Ensure it appears above the header and other content */
+    display: flex;
+    flex-direction: column; /* Stack the icons vertically */
+    align-items: flex-end !important;
+    justify-content: center;
+    margin: auto 0px;
+}
+
+.flag {
+    z-index: 1000;
+    height: 25px;
+    text-align: right !important;
+    filter: grayscale(100%); /* Adds the grayscale effect */
+    transition: all 0.3s;    /* Smooth transition effect */
+    cursor: pointer;         /* Hand cursor on hover for better UX */
+    margin-right: 10px;
+    margin-top: 5px;
+}
+.flag.active-flag {
+    transform: scale(1.2);   /* Scales the image */
+    filter: none;            /* Removes the grayscale effect */
+}
+
+
+.header-title {
+    font-size: 24px;
+    line-height: 1.2;
+    flex: 1;
+    /* Make it take the available space so the text remains centered */
+    text-align: center;
+    /* Ensure the text remains centered */
+}
+
+.icon-column {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    flex-basis: 10%;
+    /* This gives the icon column a fixed width relative to the header */
+}
+
+.icon-column i {
+    margin: 5px 0;
+    font-size: 20px;
+}

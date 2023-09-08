@@ -639,6 +639,7 @@ const coffees = [
   },
 ];
 
+
 document.querySelectorAll(".folder-tab").forEach((tab) => {
   tab.addEventListener("click", function () {
     console.log("tab clicked");
