@@ -14,10 +14,12 @@
     /* Full width */
     z-index: 999;
     /* Ensure it appears above other content */
-    height: 18vh;
+    height: 20vh;
     color: white;
     align-items: center;
+    justify-content: center;
 }
+
 .icon-column{
     position: fixed;
     top: 4px;     /* Align with the top edge of the viewport */
@@ -28,13 +30,11 @@
     align-items: flex-end !important;
     justify-content: center;
     margin: auto 0px;
-    
-
 }
 
 .flag {
     z-index: 1000;
-    height: 30px;
+    height: 25px;
     text-align: right !important;
     filter: grayscale(100%); /* Adds the grayscale effect */
     transition: all 0.3s;    /* Smooth transition effect */
@@ -71,7 +71,45 @@
     font-size: 20px;
 }
 
+/* --------------- carrito -----------------*/
+#cart-count {
+    display: flex; 
+    margin-left: 30px;
+    color: red;
+    top: 30px;
+}
 
+.badge:after{
+    content:attr(value);
+    font-size: 20px;
+    color: #fff;
+    background: red;
+    border-radius: 50%;
+    padding: 5px 5px;
+    position:relative;
+    left:-8px;
+    top:-22px;
+    opacity:0.9;
+}
+
+.cart-count {
+    padding-top: 0px !important;
+    padding-left: 0px !important;
+    font-size: 35px !important;
+}
+
+.header button {
+    display: flex;
+    margin-left: 10px;
+    padding-top: 0px;
+}
+
+.offcanvas-body ul {
+    list-style-type: none;
+    padding-left: 0;  /* This will remove the default padding */
+}
+
+/* ----------------- navbar-------------- */
 nav {
     z-index: 100;
     position: relative;
@@ -138,9 +176,15 @@ nav {
 }
 
 /* ---------tabs content------- */
+.folder-content {
+    background-color: #bababa69;
+}
+
 .card-tapa {
     margin: auto;
     margin-bottom: 15px;
+    padding: 12px;
+    padding-bottom: 0;
 }
 
 .card-body-top {
@@ -148,13 +192,16 @@ nav {
 }
 
 .card-body-bottom {
-    padding-top: 0 !important;
-    padding-bottom: 10px !important;
+    padding: 0 0 10px 0 !important;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;  /* This centers the icons vertically, if needed */
 }
 
 .card-body-bottom i {
     font-size: 25px;
 }
+
 
 /* ----------drink cards-------------- */
 .drink-card {
@@ -168,6 +215,7 @@ nav {
 .card-title{
     font-size: 1em;
 }
+
 
 
 /* ------------ wine cards--------- */

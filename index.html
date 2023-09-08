@@ -14,19 +14,52 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
         integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
         crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <link href="https://use.fontawesome.com/releases/v5.0.1/css/all.css" rel="stylesheet">
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm"
+        crossorigin="anonymous"></script>
+
 </head>
 
 <body>
     <div class="header">
+
         TAPERÍA<br>
-        Princesa
+        Princesa<br>
 
         <div class="icon-column">
             <img src="languages/spain.png" class="flag active-flag" alt="ESP"></img>
             <img src="languages/england.png" class="flag" alt="ENG"></img>
             <img src="languages/france.png" class="flag" alt="FRA"></img>
+            <img src="languages/italy.png" class="flag" alt="ITA"></img>
+        </div>
+        <!-- <button type="button" class="btn" data-bs-toggle="modal" data-bs-target="#exampleModal">
+            <span id="cart-count"><i class="fa badge fa-lg cart-count" value=0>&#xf07a;</i></span>
+        </button> -->
+        <button class="btn" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasScrolling"
+            aria-controls="offcanvasScrolling">
+            <i class="fa badge fa-lg cart-count" value=0>&#xf07a;</i>
+        </button>
+    </div>
+
+    <!-- Offcanvas -->
+    <div class="offcanvas offcanvas-start" data-bs-scroll="true" data-bs-backdrop="false" tabindex="-1"
+        id="offcanvasScrolling" aria-labelledby="offcanvasScrollingLabel">
+        <div class="offcanvas-header">
+            <h5 class="offcanvas-title" id="offcanvasScrollingLabel">Your cart</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+        </div>
+        <div class="offcanvas-body">
+            <ul>
+
+            </ul>
         </div>
     </div>
+
     <nav>
         <ul class="file-folder-nav">
             <li class="folder-tab active" data-target="folder-content-tapas" id="nav-tapas"><i
@@ -89,9 +122,9 @@
     <div class="folder-content" id="folder-content-eggs">
         <h1>Huevos estrellados con Patatas Fritas</h1>
         <div id="folder-content-eggs-aux">
-                  <!-- broken eggs content -->
+            <!-- broken eggs content -->
         </div>
-  
+
     </div>
 
     <div class="folder-content" id="folder-content-desserts-coffees">

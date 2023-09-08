@@ -14,18 +14,18 @@ const tapas = [
     image: "./images/generic-tapa.jpg",
   },
   {
-    name: 'Bomba "Tapería"',
-    nameEnglish: '"Tapería" Bomb',
-    nameFrench: 'Bombe "Tapería"',
+    name: "Bomba Tapería",
+    nameEnglish: "Tapería Bomb",
+    nameFrench: "Bombe Tapería",
     price: "2.85",
-    image: "./images/generic-tapa.jpg",
+    image: "./images/bomba.png",
   },
   {
     name: "Croqueta de Jamón",
     nameEnglish: "Ham Croquette",
     nameFrench: "Croquette de Jambon",
     price: "1.80",
-    image: "./images/generic-tapa.jpg",
+    image: "./images/croqueta.png",
   },
   {
     name: "Boquerones Fritos",
@@ -39,14 +39,14 @@ const tapas = [
     nameEnglish: "Fried Calamari",
     nameFrench: "Calamars Frits",
     price: "8.25",
-    image: "./images/generic-tapa.jpg",
+    image: "./images/calamares.png",
   },
   {
     name: "Rabas de Pollo",
     nameEnglish: "Crispy Chicken Fingers",
     nameFrench: "Doigts de poulet croustillants",
     price: "6.95",
-    image: "./images/generic-tapa.jpg",
+    image: "./images/rabas.png",
   },
   {
     name: "Boquerones en Vinagre",
@@ -88,14 +88,14 @@ const tapas = [
     nameEnglish: "Baby Chorizos",
     nameFrench: "Chorizos à la Bière",
     price: "4.95",
-    image: "./images/generic-tapa.jpg",
+    image: "./images/choricitos.png",
   },
   {
     name: "Lacón con Patatas Cocidas",
     nameEnglish: "Pork Shoulder",
     nameFrench: "Jambon aux Pommes de Terre Bouillies",
     price: "4.75",
-    image: "./images/generic-tapa.jpg",
+    image: "./images/lacon.png",
   },
   {
     name: "Morcilla de Burgos",
@@ -165,14 +165,14 @@ const tapas = [
     nameEnglish: "Chicken Gyosas",
     nameFrench: "Gyosas au Poulet",
     price: "6.50",
-    image: "./images/generic-tapa.jpg",
+    image: "./images/gyosas-pollo.png",
   },
   {
     name: "Jamon Ibérico",
     nameEnglish: "Iberian Smoked Ham",
     nameFrench: "Jambon Ibérique",
     price: "12.95",
-    image: "./images/generic-tapa.jpg",
+    image: "./images/jamon.png",
   },
   {
     name: "Queso Curado",
@@ -193,14 +193,14 @@ const tapas = [
     nameEnglish: "Bread",
     nameFrench: "Pain",
     price: "1.50",
-    image: "./images/generic-tapa.jpg",
+    image: "./images/pan.png",
   },
   {
     name: "Olivas",
     nameEnglish: "Olives",
     nameFrench: "Olives",
     price: "2.20",
-    image: "./images/generic-tapa.jpg",
+    image: "./images/olivas.png",
   },
   {
     name: "Olivas Rellenas",
@@ -237,7 +237,7 @@ const paellas = [
     name: "Arroz Negro",
     nameEnglish: "Black Rise",
     price: "27.00",
-    image: "./images/generic-paella.jpg",
+    image: "./images/arroz-negro.png",
   },
 ];
 
@@ -593,14 +593,14 @@ const desserts = [
     nameEnglish: "Apple Strudel",
     nameFrench: "Strudel aux Pommes",
     price: "5.50",
-    image: "./images/generic-tapa.jpg",
+    image: "./images/strudel.png",
   },
   {
     name: "Helado",
     nameEnglish: "Ice-Cream",
     nameFrench: "Glace",
     price: "5.50",
-    image: "./images/generic-tapa.jpg",
+    image: "./images/helado.png",
   },
   {
     name: "Sorbet de Limón con Cava",
@@ -714,6 +714,8 @@ function getNameByLanguage(item) {
       return item.nameEnglish;
     case "FRA":
       return item.nameFrench;
+    case "ITA":
+      return item.nameItalian;
     default:
       return item.name;
   }
@@ -722,6 +724,19 @@ function getNameByLanguage(item) {
 function cardGenerator(item) {
   let name = getNameByLanguage(item);
 
+  // return `
+  //     <div class="card card-tapa" style="width: 18rem;">
+  //         <img src="${item.image}" class="card-img-top" alt="${name}">
+  //         <div class="card-body card-body-top">
+  //             <h5 class="card-name">${name}</h5>
+  //             <p class="card-text">Precio: ${item.price}€</p>
+  //         </div>
+  //         <div class="card-body card-body-bottom">
+  //           <i class="fa-solid fa-cart-plus" onclick="addToCart('${name}')"></i>
+  //           <i class="fa-solid fa-circle-info"></i>
+  //         </div>
+  //     </div>
+  //   `;
   return `
       <div class="card card-tapa" style="width: 18rem;">
           <img src="${item.image}" class="card-img-top" alt="${name}">
@@ -730,7 +745,7 @@ function cardGenerator(item) {
               <p class="card-text">Precio: ${item.price}€</p>
           </div>
           <div class="card-body card-body-bottom">
-              <i class="fa-solid fa-circle-plus"></i>
+            <i class="fa-solid fa-cart-plus" onclick="addToCart('${name}')"></i>
           </div>
       </div>
     `;
@@ -829,3 +844,45 @@ function renderItems(items, cardType, containerId) {
     container.insertAdjacentHTML("beforeend", htmlContent);
   }
 }
+
+let cart = {};
+
+function addToCart(itemName) {
+  if (cart[itemName]) {
+    // Increment the count of the item if it's already in the cart
+    cart[itemName] += 1;
+  } else {
+    // Set the count to 1 for the item if it's not in the cart
+    cart[itemName] = 1;
+  }
+
+  updateCartCount();
+  console.log(cart);
+}
+
+function updateCartCount() {
+  let totalItems = 0;
+
+  for (let [itemName, quantity] of Object.entries(cart)) {
+    totalItems += quantity;
+  }
+
+  const cartCountElement = document.querySelector(".badge");
+  if (cartCountElement) {
+    cartCountElement.setAttribute("value", totalItems);
+  }
+}
+
+// Listen to the 'show.bs.modal' event to populate the ul
+document
+  .getElementById("offcanvasScrolling")
+  .addEventListener("show.bs.offcanvas", function () {
+    const ulElement = document.querySelector(".offcanvas-body ul");
+    ulElement.innerHTML = ""; // Clear the ul first
+
+    for (let [itemName, quantity] of Object.entries(cart)) {
+      const li = document.createElement("li");
+      li.textContent = `${itemName} - ${quantity}`;
+      ulElement.appendChild(li);
+    }
+  });
