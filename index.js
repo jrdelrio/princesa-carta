@@ -639,7 +639,6 @@ const coffees = [
   },
 ];
 
-
 document.querySelectorAll(".folder-tab").forEach((tab) => {
   tab.addEventListener("click", function () {
     console.log("tab clicked");
@@ -725,19 +724,6 @@ function getNameByLanguage(item) {
 function cardGenerator(item) {
   let name = getNameByLanguage(item);
 
-  // return `
-  //     <div class="card card-tapa" style="width: 18rem;">
-  //         <img src="${item.image}" class="card-img-top" alt="${name}">
-  //         <div class="card-body card-body-top">
-  //             <h5 class="card-name">${name}</h5>
-  //             <p class="card-text">Precio: ${item.price}€</p>
-  //         </div>
-  //         <div class="card-body card-body-bottom">
-  //           <i class="fa-solid fa-cart-plus" onclick="addToCart('${name}')"></i>
-  //           <i class="fa-solid fa-circle-info"></i>
-  //         </div>
-  //     </div>
-  //   `;
   return `
       <div class="card card-tapa" style="width: 18rem;">
           <img src="${item.image}" class="card-img-top" alt="${name}">
@@ -874,16 +860,42 @@ function updateCartCount() {
   }
 }
 
-// Listen to the 'show.bs.modal' event to populate the ul
-document
-  .getElementById("offcanvasScrolling")
-  .addEventListener("show.bs.offcanvas", function () {
-    const ulElement = document.querySelector(".offcanvas-body ul");
-    ulElement.innerHTML = ""; // Clear the ul first
+// Listen to the 'show.bs.offcanvas' event to populate the ul
+document.getElementById("offcanvasScrolling").addEventListener("show.bs.offcanvas", function () {
+  const ulElement = document.querySelector(".offcanvas-body ul");
+  ulElement.innerHTML = ""; // Clear the ul first
 
-    for (let [itemName, quantity] of Object.entries(cart)) {
+  for (let [itemName, quantity] of Object.entries(cart)) {
       const li = document.createElement("li");
-      li.textContent = `${itemName} - ${quantity}`;
+      li.classList.add("cart-row"); // Add a class to control styling
+
+      const itemNameSpan = document.createElement("span");
+      itemNameSpan.textContent = itemName;
+      li.appendChild(itemNameSpan);
+      
+      const inputGroupHTML = `
+      <div class="input-group">
+        <input type="button" value="+" class="button-plus" data-field="quantity">
+        <input class="quantity-field" type="number" step="1" max="" value="${quantity}" name="quantity" class="quantity-field">
+        <input type="button" value="-" class="button-minus" data-field="quantity">
+      </div>`;
+      
+      li.innerHTML += inputGroupHTML;
       ulElement.appendChild(li);
-    }
+  }
+});
+
+function attachEventHandlers() {
+  const inputGroups = document.querySelectorAll('.input-group');
+  inputGroups.forEach(group => {
+      group.addEventListener('click', function(e) {
+          if (e.target.classList.contains('button-plus')) {
+              incrementValue(e);
+          } else if (e.target.classList.contains('button-minus')) {
+              decrementValue(e);
+          }
+      });
   });
+}
+
+document.getElementById("offcanvasScrolling").addEventListener("shown.bs.offcanvas", attachEventHandlers);
