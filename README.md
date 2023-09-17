@@ -39,11 +39,15 @@ $ cd princesa-carta
 
 ### Option 1:
 
+Go to [Restaurant Menu](https://jrdelrio.github.io/princesa-carta/)
+
+### Option 2:
+
 1. Get into "princesa-carta" directory.
 2. Double click teh index.html file.
 
 
-### Option 2:
+### Option 3:
 
 ```bash
 # Navigate to the project directory
