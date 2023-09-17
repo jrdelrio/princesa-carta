@@ -10,9 +10,11 @@ Welcome to the "Restaurant Menu" project! This project is a interactive app for 
 
 ## About the Project
 
-This project renderizes all the dishes and drinks from the restaurant. It tajkesall the data from json files, also included in the project, and with the css library [Bootstrap](https://getbootstrap.com/) can see every food option in a beautiful card.
+This project renderizes all the dishes and drinks from the restaurant. The app takes all the data from json files, also included in the project, and with the css library [Bootstrap](https://getbootstrap.com/) can see every food option in a beautiful card.
 
-Debido a que esta app busca abarcar el máximo de restaurantes en todo el mundo, tiene la opción de cambiar el idioma de todos los platos y bebidas de una manera muy simple e intuitiva para todos los clientes.
+All the icons in the app are provided by [font awesome](https://fontawesome.com/) or [flat icon](https://www.flaticon.com/)
+
+Because this app seeks to cover as many restaurants as possible around the world, it has the option to change the language of all dishes and drinks in a very simple and intuitive way for all customers.
 
 That's not all. The user can go throw every section in the navbar and can check all the food they have pick and see it sorted opening the cart section.
 
